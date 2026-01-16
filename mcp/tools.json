@@ -1,0 +1,103 @@
+[
+  {
+    "name": "search_skills",
+    "description": "Search for agent skills using ES|QL full-text search. Returns matching skills with relevance scores.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Search query string to find relevant skills"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "Maximum number of results to return",
+          "default": 5
+        }
+      },
+      "required": ["query"]
+    }
+  },
+  {
+    "name": "get_skill_by_id",
+    "description": "Retrieve a specific skill by its unique identifier.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "skill_id": {
+          "type": "string",
+          "description": "The unique identifier of the skill to retrieve"
+        }
+      },
+      "required": ["skill_id"]
+    }
+  },
+  {
+    "name": "list_skills_by_domain",
+    "description": "List all skills within a specific domain category (e.g., finance, insurance, life_sciences).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "type": "string",
+          "description": "The domain category to filter skills by"
+        }
+      },
+      "required": ["domain"]
+    }
+  },
+  {
+    "name": "get_skill_metadata",
+    "description": "Retrieve metadata for a skill including tags, complexity, and last updated timestamp.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "skill_id": {
+          "type": "string",
+          "description": "The unique identifier of the skill"
+        }
+      },
+      "required": ["skill_id"]
+    }
+  },
+  {
+    "name": "search_skills_by_tags",
+    "description": "Search for skills matching specific tags.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Array of tags to search for"
+        },
+        "match_all": {
+          "type": "boolean",
+          "description": "If true, requires all tags to match; if false, matches any tag",
+          "default": false
+        }
+      },
+      "required": ["tags"]
+    }
+  },
+  {
+    "name": "execute_skill",
+    "description": "Execute a skill with provided parameters and return the result.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "skill_id": {
+          "type": "string",
+          "description": "The unique identifier of the skill to execute"
+        },
+        "parameters": {
+          "type": "object",
+          "description": "Parameters to pass to the skill execution"
+        }
+      },
+      "required": ["skill_id", "parameters"]
+    }
+  }
+]

@@ -1,0 +1,5 @@
+FROM agent_skills
+| EVAL tags_str = MV_CONCAT(tags, ",")
+| EVAL has_lab = tags_str RLIKE ".*lab.*"
+| KEEP skill_id, tags_str, has_lab
+| LIMIT 5

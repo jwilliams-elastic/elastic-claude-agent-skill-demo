@@ -1,0 +1,102 @@
+{
+  "mappings": {
+    "properties": {
+      "skill_id": {
+        "type": "keyword",
+        "copy_to": ["semantic_content"]
+      },
+      "name": {
+        "type": "text",
+        "fields": {
+          "keyword": { "type": "keyword" }
+        },
+        "copy_to": ["semantic_content"]
+      },
+      "description": {
+        "type": "text",
+        "analyzer": "english",
+        "copy_to": ["semantic_content"]
+      },
+      "short_description": {
+        "type": "text",
+        "analyzer": "english",
+        "copy_to": ["semantic_content"]
+      },
+      "domain": {
+        "type": "keyword",
+        "copy_to": ["semantic_content"]
+      },
+      "tags": {
+        "type": "keyword",
+        "copy_to": ["semantic_content"]
+      },
+      "author": {
+        "type": "keyword",
+        "copy_to": ["semantic_content"]
+      },
+      "version": {
+        "type": "keyword"
+      },
+      "allowed_tools": {
+        "type": "keyword"
+      },
+      "created_at": {
+        "type": "date"
+      },
+      "updated_at": {
+        "type": "date"
+      },
+      "usage_count": {
+        "type": "long"
+      },
+      "success_rate": {
+        "type": "float"
+      },
+      "avg_execution_time_ms": {
+        "type": "long"
+      },
+      "rating": {
+        "type": "float"
+      },
+      "skill_markdown": {
+        "type": "text",
+        "index": false
+      },
+      "resources": {
+        "type": "nested",
+        "properties": {
+          "filename": { "type": "keyword" },
+          "file_type": { "type": "keyword" },
+          "content": { "type": "text", "index": false },
+          "content_base64": { "type": "binary" },
+          "description": { "type": "text" }
+        }
+      },
+      "dependencies": {
+        "type": "keyword"
+      },
+      "python_packages": {
+        "type": "keyword"
+      },
+      "data_sources": {
+        "type": "keyword"
+      },
+      "semantic_content": {
+        "type": "semantic_text",
+        "inference_id": ".jina-embeddings-v3"
+      },
+      "examples": {
+        "type": "text"
+      },
+      "execution_mode": {
+        "type": "keyword"
+      },
+      "requires_elasticsearch": {
+        "type": "boolean"
+      },
+      "index_requirements": {
+        "type": "keyword"
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+FROM agent_skills
+| EVAL tags_str = MV_CONCAT(tags, ",")
+| WHERE tags_str RLIKE ?tag
+| KEEP skill_id, name, domain, tags, short_description

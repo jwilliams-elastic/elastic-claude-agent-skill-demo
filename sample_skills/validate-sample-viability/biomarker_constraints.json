@@ -1,0 +1,97 @@
+{
+  "version": "2026.Q1",
+  "last_updated": "2026-01-14",
+  "sample_types": {
+    "Plasma-EDTA": {
+      "min_volume_ml": 3.0,
+      "max_processing_time_hours": 4,
+      "required_assays": [
+        "Complete Metabolic Panel",
+        "Lipid Profile",
+        "Inflammatory Markers (CRP, IL-6)"
+      ],
+      "storage_requirements": {
+        "temp_range_celsius": [-80, -70],
+        "max_freeze_thaw_cycles": 2
+      }
+    },
+    "Serum": {
+      "min_volume_ml": 2.5,
+      "max_processing_time_hours": 6,
+      "required_assays": [
+        "Tumor Markers",
+        "Hormone Panel",
+        "Protein Electrophoresis"
+      ],
+      "storage_requirements": {
+        "temp_range_celsius": [-80, -70],
+        "max_freeze_thaw_cycles": 3
+      }
+    },
+    "Whole-Blood": {
+      "min_volume_ml": 5.0,
+      "max_processing_time_hours": 2,
+      "required_assays": [
+        "Complete Blood Count",
+        "Flow Cytometry",
+        "Genomic DNA Extraction"
+      ],
+      "storage_requirements": {
+        "temp_range_celsius": [-80, -70],
+        "max_freeze_thaw_cycles": 1
+      }
+    },
+    "Plasma-Heparin": {
+      "min_volume_ml": 3.5,
+      "max_processing_time_hours": 3,
+      "required_assays": [
+        "Coagulation Studies",
+        "Ammonia Level",
+        "Lactate"
+      ],
+      "storage_requirements": {
+        "temp_range_celsius": [-80, -70],
+        "max_freeze_thaw_cycles": 2
+      }
+    },
+    "Urine": {
+      "min_volume_ml": 10.0,
+      "max_processing_time_hours": 8,
+      "required_assays": [
+        "Urinalysis",
+        "Microalbumin",
+        "Toxicology Screen"
+      ],
+      "storage_requirements": {
+        "temp_range_celsius": [-80, -70],
+        "max_freeze_thaw_cycles": 2
+      }
+    },
+    "CSF": {
+      "min_volume_ml": 1.0,
+      "max_processing_time_hours": 1,
+      "required_assays": [
+        "Cell Count",
+        "Protein",
+        "Glucose",
+        "Oligoclonal Bands"
+      ],
+      "storage_requirements": {
+        "temp_range_celsius": [-80, -70],
+        "max_freeze_thaw_cycles": 1
+      },
+      "critical": true
+    }
+  },
+  "turbidity_thresholds": {
+    "acceptable": 0.0,
+    "caution": 0.5,
+    "ultracentrifugation_required": 0.8,
+    "reject": 1.2
+  },
+  "quality_control_notes": {
+    "turbidity_measurement": "Measured using Beckman Coulter DU 800 nephelometer at 600nm wavelength",
+    "temperature_monitoring": "Continuous monitoring via VWR temperature loggers with ±0.5°C accuracy",
+    "volume_measurement": "Calibrated pipettes traceable to NIST standards"
+  }
+}

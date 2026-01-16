@@ -1,0 +1,13 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "skill_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": ["lowercase", "stop", "snowball"]
+        }
+      }
+    }
+  }
+}

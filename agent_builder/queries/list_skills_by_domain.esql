@@ -1,0 +1,4 @@
+FROM agent_skills
+| WHERE domain == ?domain
+| KEEP skill_id, name, domain, short_description, tags, rating
+| SORT rating DESC

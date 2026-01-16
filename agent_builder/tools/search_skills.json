@@ -1,0 +1,15 @@
+{
+  "id": "search_skills",
+  "type": "esql",
+  "description": "Semantic search for agent skills using natural language queries. Returns the most relevant skills based on the search query.",
+  "tags": ["agent-skills", "mcp", "search"],
+  "configuration": {
+    "query": "FROM agent_skills | LIMIT ?limit",
+    "params": {
+      "limit": {
+        "type": "integer",
+        "description": "Maximum number of results to return (default: 5)"
+      }
+    }
+  }
+}

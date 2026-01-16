@@ -1,0 +1,4 @@
+FROM agent_skills
+| EVAL tags_str = MV_CONCAT(tags, ",")
+| KEEP skill_id, tags, tags_str
+| LIMIT 3
