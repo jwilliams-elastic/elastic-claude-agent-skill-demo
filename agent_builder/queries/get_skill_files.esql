@@ -1,0 +1,3 @@
+FROM agent_skill_files
+| WHERE skill_id == ?skill_id
+| KEEP skill_id, file_name, file_path, file_type, file_content

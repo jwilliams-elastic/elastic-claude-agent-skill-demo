@@ -2,6 +2,67 @@
 
 A demonstration of using Elasticsearch as a backend for Claude agent skills via the Model Context Protocol (MCP). This repository contains Python scripts, JSON configurations, and sample domain-specific skills showcasing proprietary business logic retrieval.
 
+## Quick Start
+
+### 1. Install Dependencies
+
+```bash
+uv sync
+```
+
+### 2. Configure Environment
+
+Create a `.env` file with your Elasticsearch and Kibana credentials:
+
+```bash
+ELASTIC_SEARCH_URL=https://your-elasticsearch-instance.elastic.cloud
+KIBANA_URL=https://your-kibana-instance.elastic.cloud
+ELASTIC_API_KEY=your_api_key_here
+```
+
+### 3. Create the Workflow in Kibana
+
+1. Go to **Kibana → Management → Workflows**
+2. Create a new workflow using the contents of `agent_builder/workflows/agent_skills_operator.yaml`
+3. Copy the workflow ID from the URL (e.g., `workflow-910a3d13-44e8-491d-bc3f-52ac1946f9a7`)
+4. Update `agent_builder/tools/consultant_skills_operator.json` with your workflow ID:
+   ```json
+   {
+     "configuration": {
+       "workflow_id": "YOUR_WORKFLOW_ID_HERE",
+       "wait_for_completion": true
+     }
+   }
+   ```
+
+### 4. Setup (Create Tools & Agents)
+
+```bash
+./init.sh
+```
+
+This registers MCP tools and agents with Kibana. Follow the "Next Steps" output to start the API server and Cloudflare tunnel.
+
+### 5. Start Claude with Environment Loaded
+
+```bash
+export $(cat .env | xargs) && claude
+```
+
+### 6. Teardown (Clean Slate)
+
+To delete all tools and agents for a fresh rebuild:
+
+```bash
+./init.sh --delete-all
+```
+
+## Documentation
+
+- **[DEMO_SCRIPT.md](DEMO_SCRIPT.md)** - Example dialogue showcasing skill hot-loading
+- **[AGENT_BUILDER.md](AGENT_BUILDER.md)** - Complete Agent Builder integration guide
+- **[TESTING.md](TESTING.md)** - Comprehensive testing guide
+
 ## Architecture
 
 - **Language:** Python 3.10+
@@ -116,14 +177,13 @@ This script connects to your Elasticsearch instance and performs semantic search
 
 ### Step 4: Integrate with Agent Builder
 
-Use the MCP tool definitions in `mcp/tools.json` to integrate with your Claude agent:
+Use the MCP tool definitions in `agent_builder/tools/` to integrate with your Claude agent:
 
-1. **search_skills** - Full-text and vector search across skills
-2. **get_skill_by_id** - Retrieve a specific skill by ID
+1. **search_skills** - Semantic and full-text search across skills
+2. **get_skill_files** - Retrieve all files for a skill (Python, JSON, CSV)
 3. **list_skills_by_domain** - Filter skills by domain (finance, insurance, life_sciences)
 4. **get_skill_metadata** - Get metadata without full content
 5. **search_skills_by_tags** - Search skills by tags
-6. **execute_skill** - Hot-load and execute a skill's Python implementation
 
 ## Agent Builder Integration
 
@@ -170,11 +230,11 @@ uv run pytest tests/test_agent_builder_mcp.py -v
 
 | Tool | Description | ES|QL Query |
 |------|-------------|--------------|
-| `search_skills` | Semantic search for skills | `FROM agent_skills \| LIMIT ?limit` |
-| `get_skill_by_id` | Retrieve skill by ID | `FROM agent_skills \| WHERE skill_id == ?skill_id` |
-| `list_skills_by_domain` | List skills in domain | `FROM agent_skills \| WHERE domain == ?domain \| KEEP skill_id, name, domain, short_description, tags, rating \| SORT rating DESC` |
-| `get_skill_metadata` | Get lightweight metadata | `FROM agent_skills \| WHERE skill_id == ?skill_id \| KEEP skill_id, name, domain, tags, author, version, rating, created_at` |
-| `search_skills_by_tags` | Search by tags | `FROM agent_skills \| EVAL tags_str = MV_CONCAT(tags, ",") \| WHERE tags_str RLIKE ?tag \| KEEP skill_id, name, domain, tags, short_description` |
+| `search_skills` | Semantic + full-text search | `FROM agent_skills METADATA _score \| WHERE name: ?query OR description: ?query OR ... \| SORT _score DESC` |
+| `get_skill_files` | Retrieve all files for a skill | `FROM agent_skill_files \| WHERE skill_id == ?skill_id` |
+| `list_skills_by_domain` | List skills in domain | `FROM agent_skills \| WHERE domain == ?domain \| SORT rating DESC` |
+| `get_skill_metadata` | Get lightweight metadata | `FROM agent_skills \| WHERE skill_id == ?skill_id \| KEEP skill_id, name, domain, tags, ...` |
+| `search_skills_by_tags` | Search by tags | `FROM agent_skills \| WHERE tags_str RLIKE ?tag` |
 
 ### Management Commands
 
@@ -207,18 +267,18 @@ results = tester.test_tool('search_skills', {
     'limit': 3
 })
 
-# Get skill by ID
+# Get skill files
 if results.get('results'):
     skill_id = results['results'][0]['skill_id']
-    skill = tester.test_tool('get_skill_by_id', {'skill_id': skill_id})
-    print(f"Retrieved: {skill['results'][0]['name']}")
+    files = tester.test_tool('get_skill_files', {'skill_id': skill_id})
+    print(f"Retrieved {len(files['results'])} files for skill: {skill_id}")
 ```
 
-### Documentation
+### Agent Builder Documentation
 
 For comprehensive documentation on Agent Builder tools, see:
 - **[AGENT_BUILDER.md](AGENT_BUILDER.md)** - Complete guide with ES|QL patterns, troubleshooting, and examples
-- **Tool Definitions**: `agent_builder/tools/` - JSON definitions for all 5 tools
+- **Tool Definitions**: `agent_builder/tools/` - JSON definitions for all tools
 - **ES|QL Queries**: `agent_builder/queries/` - Raw query files for testing
 
 ## Sample Skills
@@ -298,13 +358,13 @@ elastic-claude-agent-skill-demo/
 ├── agent_builder/
 │   ├── tools/                   # Agent Builder tool definitions (JSON)
 │   │   ├── search_skills.json
-│   │   ├── get_skill_by_id.json
+│   │   ├── get_skill_files.json
 │   │   ├── list_skills_by_domain.json
 │   │   ├── get_skill_metadata.json
 │   │   └── search_skills_by_tags.json
 │   └── queries/                 # ES|QL query files for testing
 │       ├── search_skills.esql
-│       ├── get_skill_by_id.esql
+│       ├── get_skill_files.esql
 │       ├── list_skills_by_domain.esql
 │       ├── get_skill_metadata.esql
 │       └── search_skills_by_tags.esql
@@ -330,12 +390,12 @@ elastic-claude-agent-skill-demo/
 ├── mcp/
 │   └── tools.json                    # MCP tool definitions for Agent Builder
 ├── pyproject.toml                    # Project dependencies (managed by uv)
+├── setup.sh                          # Setup script (indexes + MCP tools)
+├── teardown.sh                       # Teardown script (delete all)
 ├── README.md                         # This file
 ├── AGENT_BUILDER.md                  # Agent Builder integration guide
 ├── DEMO_SCRIPT.md                    # Example dialogue showcasing hot-loading
-├── TESTING.md                        # Comprehensive testing guide
-├── PRD.md                            # Project requirements and design document
-└── PRD-MCP.md                        # Agent Builder MCP tools PRD
+└── TESTING.md                        # Comprehensive testing guide
 
 ```
 

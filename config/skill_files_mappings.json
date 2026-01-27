@@ -1,0 +1,28 @@
+{
+  "mappings": {
+    "properties": {
+      "skill_id": {
+        "type": "keyword"
+      },
+      "file_name": {
+        "type": "keyword"
+      },
+      "file_path": {
+        "type": "keyword"
+      },
+      "file_type": {
+        "type": "keyword"
+      },
+      "file_content": {
+        "type": "text",
+        "index": false
+      },
+      "file_size_bytes": {
+        "type": "long"
+      },
+      "created_at": {
+        "type": "date"
+      }
+    }
+  }
+}

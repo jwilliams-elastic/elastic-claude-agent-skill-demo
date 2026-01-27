@@ -1,0 +1,103 @@
+name: consultant_skills_operator
+description: Operator workflow for managing consultant skills (setup, teardown, update-skills) with async job polling
+enabled: true
+
+triggers:
+  - type: manual
+
+consts:
+  api_base_url: https://antarctica-bronze-convenience-plains.trycloudflare.com
+  max_polls: 30
+  
+inputs:
+  - name: operation
+    type: string
+    default: setup
+    description: "Operation to perform: setup, teardown, update-skills"
+
+steps:
+  # Step 1: Start the async operation (setup or teardown)
+  - name: start_operation
+    type: http
+    with:
+      url: "{{ consts.api_base_url }}/api/v1/ops/{{ inputs.operation }}"
+      method: POST
+      headers:
+        Content-Type: application/json
+      timeout: 30s
+
+  # Step 2: Log the job ID
+  - name: log_job_started
+    type: console
+    with:
+      message: "Started {{ inputs.operation }} job with ID: {{ steps.start_operation.output.data.job_id }}"
+
+  # Step 3: Initial status check (seeds the loop condition)
+  - name: initial_check
+    type: http
+    with:
+      url: "{{ consts.api_base_url }}/api/v1/jobs/{{ steps.start_operation.output.data.job_id }}"
+      method: GET
+      timeout: 30s
+
+  - name: log_initial
+    type: console
+    with:
+      message: "Initial check: status={{ steps.initial_check.output.data.status }}, progress={{ steps.initial_check.output.data.progress }}"
+
+  # Step 4: Poll loop - only continues polling if job still running
+  # Once job completes, all remaining iterations are skipped entirely
+  - name: poll_loop
+    type: foreach
+    foreach: "{% assign polls = '' | split: '' %}{% for i in (1..consts.max_polls) %}{% assign polls = polls | push: i %}{% endfor %}{{ polls | json }}"
+    steps:
+      # Only poll if job is still running (checks previous iteration's result)
+      - name: poll_if_running
+        type: if
+        condition: "{% assign status = steps.check_job.output.data.status | default: 'pending' %}{{ status != 'completed' and status != 'failed' }}"
+        steps:
+          - name: wait_before_poll
+            type: wait
+            with:
+              duration: 10s
+
+          - name: check_job
+            type: http
+            with:
+              url: "{{ consts.api_base_url }}/api/v1/jobs/{{ steps.start_operation.output.data.job_id }}"
+              method: GET
+              timeout: 30s
+
+          - name: log_poll
+            type: console
+            with:
+              message: "Poll {{ foreach.item }}: status={{ steps.check_job.output.data.status }}, progress={{ steps.check_job.output.data.progress }}"
+
+  # Step 5: Final poll to capture the result (outside loop for valid reference)
+  - name: final_check
+    type: http
+    with:
+      url: "{{ consts.api_base_url }}/api/v1/jobs/{{ steps.start_operation.output.data.job_id }}"
+      method: GET
+      timeout: 30s
+
+  # Step 6: Final result summary
+  - name: final_result
+    type: console
+    with:
+      message: |
+        ============================================
+        Job {{ inputs.operation }} completed
+        ============================================
+        Job ID: {{ steps.start_operation.output.data.job_id | default: '[MISSING job_id from start_operation]' }}
+        Final Status: {{ steps.final_check.output.data.status | default: '[MISSING status]' }}
+        Progress: {{ steps.final_check.output.data.progress | default: '[MISSING progress]' }}
+        Message: {{ steps.final_check.output.data.message | default: '[MISSING message]' }}
+        {%- if steps.final_check.output.data.details %}
+        Details:
+          Indexes Created: {{ steps.final_check.output.data.details.indexes_created | join: ', ' }}
+          Indexes Deleted: {{ steps.final_check.output.data.details.indexes_deleted | join: ', ' }}
+          Skills Created: {{ steps.final_check.output.data.details.skills_created | size }}
+          Skills Deleted: {{ steps.final_check.output.data.details.skills_deleted | size }}
+        {%- endif %}
+        ============================================

@@ -1,0 +1,11 @@
+{
+  "id": "consultant_skills_operator",
+  "type": "workflow",
+  "description": "Executes workflows for \"setup\", \"teardown\" and \"update-skills.\"",
+  "tags": ["consultant agent skills"],
+  "configuration":
+  {
+    "workflow_id":"workflow-910a3d13-44e8-491d-bc3f-52ac1946f9a7",
+    "wait_for_completion":true
+  }
+}
