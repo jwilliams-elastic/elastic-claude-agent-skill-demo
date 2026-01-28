@@ -1,0 +1,6 @@
+key,value
+setup_time,0.05
+changeover_time,0.03
+maintenance,0.05
+quality_loss,0.02
+unplanned_downtime,0.05

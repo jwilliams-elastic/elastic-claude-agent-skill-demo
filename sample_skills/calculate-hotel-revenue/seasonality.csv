@@ -1,0 +1,4 @@
+id,demand_multiplier,months,rate_premium
+high,1.25,"6,7,8,12",1.2
+shoulder,1.0,"3,4,5,9,10,11",1.0
+low,0.75,"1,2",0.85

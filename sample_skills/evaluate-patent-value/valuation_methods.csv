@@ -1,0 +1,4 @@
+id,description,methods,weight
+income_approach,NPV of future cash flows from patent,"relief_from_royalty,excess_earnings,profit_split",0.5
+market_approach,Comparable patent transactions,"comparable_transactions,comparable_royalty_rates",0.3
+cost_approach,Cost to recreate the patented technology,"reproduction_cost,replacement_cost",0.2

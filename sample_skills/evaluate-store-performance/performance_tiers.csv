@@ -1,0 +1,6 @@
+id,action,percentile
+top_performer,flagship_model,90
+above_average,maintain_investment,75
+average,improvement_plan,50
+below_average,turnaround_review,25
+underperforming,closure_consideration,10

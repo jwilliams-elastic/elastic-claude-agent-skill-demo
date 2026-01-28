@@ -1,0 +1,5 @@
+key,value
+version,2026.1
+last_updated,2026-01-15
+traffic_analysis_peak_hours,"11,12,13,17,18,19"
+traffic_analysis_staffing_ratio,"{'high_traffic': 1.5, 'normal': 1.0, 'low_traffic': 0.7}"

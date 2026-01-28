@@ -1,0 +1,6 @@
+id,elements,weight
+financial,"payment_terms,liability_caps,price_escalation,currency_risk",0.25
+operational,"sla_requirements,delivery_obligations,resource_commitments,change_management",0.2
+legal,"indemnification,limitation_of_liability,dispute_resolution,governing_law",0.25
+compliance,"regulatory_requirements,data_privacy,audit_rights,export_controls",0.15
+termination,"termination_rights,notice_periods,exit_costs,transition_assistance",0.15

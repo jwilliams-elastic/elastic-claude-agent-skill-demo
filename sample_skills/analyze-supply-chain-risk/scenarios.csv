@@ -1,0 +1,4 @@
+id,description,duration_days,supply_reduction
+supplier_disruption_30d,Major supplier disruption for 30 days,30,0.5
+regional_disruption_60d,Regional supply chain disruption,60,0.8
+logistics_delay_14d,Port congestion or logistics delay,14,0.3

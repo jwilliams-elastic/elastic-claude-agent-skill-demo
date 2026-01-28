@@ -1,0 +1,4 @@
+id,pct_change,severity,window_days
+sudden_drop,-0.2,critical,7
+gradual_decline,-0.1,warning,30
+improvement,0.1,positive,30

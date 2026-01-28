@@ -1,0 +1,5 @@
+id,potential_cost_reduction,potential_coverage_improvement,potential_efficiency_gain,potential_margin_improvement
+channel_mix_adjustment,,,,0.05
+partner_tiering,,,0.1,
+digital_transformation,0.15,,,
+territory_optimization,,0.2,,

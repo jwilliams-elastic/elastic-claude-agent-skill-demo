@@ -1,0 +1,6 @@
+key,value
+failure_rate_weight,0.35
+severity_weight,0.25
+geographic_weight,0.15
+mileage_pattern_weight,0.15
+safety_critical_weight,0.1

@@ -1,0 +1,6 @@
+key,value
+version,2026.1
+last_updated,2026-01-15
+exclusions_product_types,"samples,returns,promotional"
+exclusions_transaction_types,"credit_memo,adjustment"
+exclusions_time_periods,promotional_periods

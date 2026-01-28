@@ -1,0 +1,4 @@
+id,audit_frequency,required_metrics
+iso_9001,annual,"defect_rate,customer_complaints,capa_closure"
+iatf_16949,annual,"ppm,fpy,cpk,oee"
+as9100,annual,"fod,process_compliance,special_processes"

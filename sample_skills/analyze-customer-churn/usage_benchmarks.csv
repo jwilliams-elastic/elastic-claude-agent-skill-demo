@@ -1,0 +1,6 @@
+key,value
+healthy_logins_30d,20
+healthy_features,5
+healthy_api_calls,500
+critical_threshold_pct,0.25
+warning_threshold_pct,0.5

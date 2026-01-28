@@ -1,0 +1,7 @@
+id,base_rate,max_occupancy,price_elasticity,tier
+standard_king,189,2,1.2,standard
+standard_double,179,4,1.3,standard
+deluxe_king,249,2,1.0,deluxe
+junior_suite,329,3,0.9,suite
+executive_suite,449,4,0.7,suite
+default,199,2,1.1,standard

@@ -58,20 +58,6 @@
       "rating": {
         "type": "float"
       },
-      "skill_markdown": {
-        "type": "text",
-        "index": false
-      },
-      "resources": {
-        "type": "nested",
-        "properties": {
-          "filename": { "type": "keyword" },
-          "file_type": { "type": "keyword" },
-          "content": { "type": "text", "index": false },
-          "content_base64": { "type": "binary" },
-          "description": { "type": "text" }
-        }
-      },
       "dependencies": {
         "type": "keyword"
       },

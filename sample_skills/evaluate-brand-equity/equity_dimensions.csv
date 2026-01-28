@@ -1,0 +1,6 @@
+id,benchmark_threshold,metrics,weight
+brand_awareness,0.6,"unaided_recall,aided_recall,top_of_mind",0.2
+brand_associations,0.65,"attribute_strength,uniqueness,favorability",0.2
+perceived_quality,0.7,"quality_rating,reliability_score,value_perception",0.25
+brand_loyalty,0.55,"repeat_purchase,recommendation_rate,price_premium_acceptance",0.25
+brand_assets,0.5,"trademark_strength,visual_identity,brand_extensions",0.1

@@ -1,0 +1,4 @@
+id,price_multiplier,volume_multiplier
+optimistic,1.05,1.2
+realistic,1.0,1.0
+pessimistic,0.95,0.8

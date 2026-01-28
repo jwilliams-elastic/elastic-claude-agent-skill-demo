@@ -1,0 +1,8 @@
+key,value
+version,2026.1
+last_updated,2026-01-15
+eligibility_rules_eligible_org_types,"501c3,501c4,government,tribal"
+eligibility_rules_min_years_operating,2
+eligibility_rules_required_registrations,sam_gov
+eligibility_rules_prohibited_activities,"lobbying,political_campaign"
+funding_threshold,65

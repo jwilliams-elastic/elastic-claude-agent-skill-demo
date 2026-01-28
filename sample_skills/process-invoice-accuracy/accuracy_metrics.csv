@@ -1,0 +1,5 @@
+id,calculation,maximum,minimum,target
+first_pass_yield,invoices_passed_first_time / total_invoices,,0.7,0.85
+exception_rate,invoices_with_exceptions / total_invoices,0.25,,0.1
+duplicate_rate,duplicate_invoices / total_invoices,0.02,,0.005
+touchless_processing_rate,auto_processed_invoices / total_invoices,,0.5,0.7

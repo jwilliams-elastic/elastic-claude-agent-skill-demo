@@ -1,0 +1,5 @@
+id,action,max_score,min_score
+critical,terminate,50,0
+high,remediate_30_days,65,50
+medium,remediate_90_days,80,65
+low,monitor,100,80

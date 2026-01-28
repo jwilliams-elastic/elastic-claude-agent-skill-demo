@@ -1,2 +1,8 @@
-FROM agent_skills
-| LIMIT 5
+FROM agent_skills METADATA _score
+| WHERE name: ?query
+    OR description: ?query
+    OR short_description: ?query
+    OR examples: ?query
+    OR semantic_content: ?query
+| SORT _score DESC
+| LIMIT ?limit

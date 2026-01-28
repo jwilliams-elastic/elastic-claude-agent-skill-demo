@@ -90,6 +90,17 @@ def index_name():
     return "agent_skills"
 
 
+@pytest.fixture(scope="session")
+def files_index_name():
+    """
+    Return the name of the skill files index.
+
+    Returns:
+        String name of the Elasticsearch files index
+    """
+    return "agent_skill_files"
+
+
 @pytest.fixture
 def search_skills(es_client, index_name):
     """
@@ -156,35 +167,36 @@ def search_skills(es_client, index_name):
 
 
 @pytest.fixture
-def get_skill_by_id(es_client, index_name):
+def get_skill_by_id(es_client, index_name, files_index_name):
     """
-    Factory fixture for retrieving skills by ID.
+    Factory fixture for retrieving skills by ID with all associated files.
 
     Args:
         es_client: Elasticsearch client fixture
         index_name: Index name fixture
+        files_index_name: Files index name fixture
 
     Returns:
-        Function that retrieves skill documents by ID
+        Function that retrieves skill documents by ID with files
 
     Example:
         skill = get_skill_by_id("verify-expense-policy")
     """
     def _get(skill_id: str) -> Dict[str, Any]:
         """
-        Retrieve skill document by ID.
+        Retrieve skill document by ID with all associated files.
 
         Args:
             skill_id: The skill_id to retrieve
 
         Returns:
-            Skill document dictionary
+            Skill document dictionary with 'files' object containing all file contents
 
         Raises:
             Exception: If skill not found
         """
-        # Search for the skill by skill_id field
-        response = es_client.search(
+        # 1. Get metadata from agent_skills
+        metadata_response = es_client.search(
             index=index_name,
             body={
                 "query": {
@@ -196,10 +208,35 @@ def get_skill_by_id(es_client, index_name):
             }
         )
 
-        if response['hits']['total']['value'] == 0:
+        if metadata_response['hits']['total']['value'] == 0:
             raise Exception(f"Skill not found: {skill_id}")
 
-        return response['hits']['hits'][0]['_source']
+        skill = metadata_response['hits']['hits'][0]['_source']
+
+        # 2. Get all files from agent_skill_files
+        files_response = es_client.search(
+            index=files_index_name,
+            body={
+                "query": {
+                    "term": {
+                        "skill_id": skill_id
+                    }
+                },
+                "size": 100  # Get all files
+            }
+        )
+
+        # 3. Merge files into skill document
+        skill['files'] = {}
+        for hit in files_response['hits']['hits']:
+            file_doc = hit['_source']
+            skill['files'][file_doc['file_name']] = file_doc['file_content']
+
+        # 4. Set skill_markdown from SKILL.md file (for backward compatibility)
+        if 'SKILL.md' in skill['files']:
+            skill['skill_markdown'] = skill['files']['SKILL.md']
+
+        return skill
 
     return _get
 
@@ -209,6 +246,9 @@ def execute_skill_logic():
     """
     Factory fixture for executing skill Python code.
 
+    Extracts files from Elasticsearch response and executes skill logic
+    in a temporary directory.
+
     Returns:
         Function that parses and executes skill code with input parameters
 
@@ -217,10 +257,10 @@ def execute_skill_logic():
     """
     def _execute(skill_content: Dict[str, Any], input_params: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Parse and execute skill Python code.
+        Parse and execute skill Python code using files from Elasticsearch.
 
         Args:
-            skill_content: Skill document containing skill_markdown field
+            skill_content: Skill document containing 'files' dict and 'skill_markdown' field
             input_params: Input parameters for the skill
 
         Returns:
@@ -230,7 +270,15 @@ def execute_skill_logic():
             Exception: If execution fails
         """
         import sys
-        from pathlib import Path
+        import tempfile
+        import os
+
+        skill_id = skill_content.get('skill_id')
+        if not skill_id:
+            raise Exception("Skill content missing skill_id")
+
+        # Get files from skill_content (populated by get_skill_by_id fixture)
+        files = skill_content.get('files', {})
 
         # Extract Python code from skill_markdown
         skill_markdown = skill_content.get('skill_markdown', '')
@@ -258,42 +306,47 @@ def execute_skill_logic():
 
         python_code = skill_markdown[code_start:code_end].strip()
 
-        # Get skill_id and build path to skill directory
-        skill_id = skill_content.get('skill_id')
-        if not skill_id:
-            raise Exception("Skill content missing skill_id")
+        # Create temp directory with skill files from Elasticsearch
+        with tempfile.TemporaryDirectory() as temp_dir:
+            # Write all files to temp directory
+            for file_name, file_content in files.items():
+                file_path = os.path.join(temp_dir, file_name)
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(file_content)
 
-        # Build path to skill directory (assuming project structure)
-        project_root = Path(__file__).parent.parent
-        skill_dir = project_root / "sample_skills" / skill_id
+            # Add temp directory to path
+            sys.path.insert(0, temp_dir)
 
-        if not skill_dir.exists():
-            raise Exception(f"Skill directory not found: {skill_dir}")
+            # Clear any cached modules from previous runs that might reference old temp directories
+            # This is necessary because module imports are cached in sys.modules
+            modules_to_remove = []
+            for mod_name, mod in sys.modules.items():
+                if hasattr(mod, '__file__') and mod.__file__:
+                    # Remove modules that were loaded from a temp directory
+                    if '/var/folders/' in mod.__file__ or '\\Temp\\' in mod.__file__:
+                        modules_to_remove.append(mod_name)
 
-        # Add skill directory to Python path temporarily
-        skill_dir_str = str(skill_dir)
-        sys.path.insert(0, skill_dir_str)
+            for mod_name in modules_to_remove:
+                del sys.modules[mod_name]
 
-        try:
-            # Create execution environment
-            exec_globals = {}
-            exec_locals = {'input_data': input_params}
-
-            # Execute the skill code
             try:
-                exec(python_code, exec_globals, exec_locals)
-            except Exception as e:
-                raise Exception(f"Skill execution failed: {str(e)}")
+                # Create execution environment
+                exec_globals = {}
+                exec_locals = {'input_data': input_params}
 
-            # Return the result (assumes skill sets 'result' variable)
-            if 'result' not in exec_locals:
-                raise Exception("Skill did not produce a 'result' variable")
+                # Execute the skill code
+                try:
+                    exec(python_code, exec_globals, exec_locals)
+                except Exception as e:
+                    raise Exception(f"Skill execution failed: {str(e)}")
 
-            return exec_locals['result']
-        finally:
-            # Clean up: remove skill directory from path
-            if skill_dir_str in sys.path:
-                sys.path.remove(skill_dir_str)
+                # Return the result (assumes skill sets 'result' variable)
+                if 'result' not in exec_locals:
+                    raise Exception("Skill did not produce a 'result' variable")
+
+                return exec_locals['result']
+            finally:
+                sys.path.remove(temp_dir)
 
     return _execute
 

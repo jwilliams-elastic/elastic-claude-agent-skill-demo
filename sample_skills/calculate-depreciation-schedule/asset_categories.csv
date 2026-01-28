@@ -1,0 +1,9 @@
+id,macrs_class,salvage_pct,useful_life_years
+buildings,39-year,0.1,39
+building_improvements,15-year,0.05,15
+machinery,7-year,0.1,7
+vehicles,5-year,0.15,5
+computers,5-year,0.0,5
+furniture,7-year,0.1,7
+software,3-year,0.0,3
+land_improvements,15-year,0.0,15

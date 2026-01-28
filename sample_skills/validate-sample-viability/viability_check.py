@@ -6,7 +6,8 @@ Implements proprietary business rules for biospecimen accessioning and quality c
 These rules are based on validated laboratory protocols specific to the institution.
 """
 
-import json
+import csv
+import ast
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -173,4 +174,5 @@ def main():
 
 
 if __name__ == "__main__":
+    import json
     main()

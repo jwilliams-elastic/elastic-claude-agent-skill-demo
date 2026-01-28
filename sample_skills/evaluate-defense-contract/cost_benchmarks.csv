@@ -1,0 +1,6 @@
+key,value
+labor_rate_per_month,15000
+max_overhead_rate,0.35
+max_profit_rate,0.15
+max_g_and_a_rate,0.12
+fringe_benefit_cap,0.35

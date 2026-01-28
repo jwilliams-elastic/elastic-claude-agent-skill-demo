@@ -1,0 +1,7 @@
+id,cost_factor,effectiveness
+compensation_adjustment,high,0.6
+career_development_plan,medium,0.7
+role_enrichment,low,0.55
+manager_coaching,medium,0.5
+flexible_work_arrangement,low,0.65
+retention_bonus,high,0.75

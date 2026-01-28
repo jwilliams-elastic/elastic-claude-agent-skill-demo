@@ -1,2 +1,0 @@
-FROM agent_skills
-| WHERE skill_id == ?skill_id

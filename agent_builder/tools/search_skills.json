@@ -2,10 +2,14 @@
   "id": "search_skills",
   "type": "esql",
   "description": "Semantic search for agent skills using natural language queries. Returns the most relevant skills based on the search query.",
-  "tags": ["agent-skills", "mcp", "search"],
+  "tags": ["consultant agent skills"],
   "configuration": {
-    "query": "FROM agent_skills | LIMIT ?limit",
+    "query": "FROM agent_skills METADATA _score | WHERE name: ?query OR description: ?query OR short_description: ?query OR examples: ?query OR semantic_content: ?query | SORT _score DESC | LIMIT ?limit",
     "params": {
+      "query": {
+        "type": "text",
+        "description": "Natural language search query to find relevant skills"
+      },
       "limit": {
         "type": "integer",
         "description": "Maximum number of results to return (default: 5)"

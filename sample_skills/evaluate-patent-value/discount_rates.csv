@@ -1,0 +1,5 @@
+id,description,rate
+low_risk,"Established technology, proven market",0.1
+medium_risk,"Growing market, some uncertainty",0.15
+high_risk,"New technology, market validation needed",0.25
+very_high_risk,"Early stage, significant uncertainty",0.35

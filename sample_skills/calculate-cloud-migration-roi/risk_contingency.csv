@@ -1,0 +1,7 @@
+risk_category,base_pct,high_complexity_add,compliance_add,description
+budget_overrun,0.15,0.10,0.05,Cost exceeds planned budget
+timeline_delay,0.20,0.15,0.10,Project takes longer than planned
+performance_issues,0.10,0.15,0.05,Application performance degradation
+security_incidents,0.05,0.05,0.10,Security vulnerabilities discovered
+data_loss,0.02,0.05,0.05,Data migration issues
+vendor_lock_in,0.10,0.05,0.00,Difficulty moving between providers

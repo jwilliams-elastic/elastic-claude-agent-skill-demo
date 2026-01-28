@@ -1,0 +1,5 @@
+key,value
+max_overhead_pct,0.15
+max_personnel_pct,0.7
+min_program_pct,0.25
+cost_per_beneficiary_threshold,500

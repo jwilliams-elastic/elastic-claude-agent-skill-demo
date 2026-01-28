@@ -1,0 +1,4 @@
+id,score_range,weight
+positive,"{'min': 0.6, 'max': 1.0}",1.0
+neutral,"{'min': 0.4, 'max': 0.6}",0.5
+negative,"{'min': 0.0, 'max': 0.4}",-1.0

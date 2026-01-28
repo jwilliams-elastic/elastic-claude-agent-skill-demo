@@ -1,0 +1,5 @@
+id,billing_cycle,billing_in_advance,billing_trigger,expense_markup,measurement_units,minimum_charge,proration_method,rate_types,requires_acceptance,rounding_method,timesheet_required
+subscription,"monthly,quarterly,annual",True,,,,,daily,,,,
+usage_based,,,,,"units,hours,gb,transactions",True,,,,up_to_nearest,
+milestone,,,milestone_completion,,,,,,True,,
+time_and_materials,,,,0.1,,,,"hourly,daily",,,True

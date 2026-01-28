@@ -2,7 +2,7 @@
   "id": "get_skill_metadata",
   "type": "esql",
   "description": "Retrieve lightweight metadata for a skill without the full content. Returns skill information excluding large fields like skill_markdown and full description.",
-  "tags": ["agent-skills", "mcp", "metadata"],
+  "tags": ["consultant agent skills"],
   "configuration": {
     "query": "FROM agent_skills | WHERE skill_id == ?skill_id | KEEP skill_id, name, domain, tags, author, version, rating, created_at",
     "params": {

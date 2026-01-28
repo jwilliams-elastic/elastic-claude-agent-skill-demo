@@ -1,0 +1,8 @@
+id,E,G,S
+manufacturing,0.4,0.3,0.3
+technology,0.25,0.4,0.35
+financial_services,0.2,0.45,0.35
+energy,0.5,0.25,0.25
+healthcare,0.25,0.3,0.45
+retail,0.3,0.3,0.4
+default,0.33,0.34,0.33

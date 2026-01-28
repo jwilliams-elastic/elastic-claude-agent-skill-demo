@@ -1,0 +1,6 @@
+id,max_ltv,min_score,rate_adjustment
+exceptional,0.97,800,-0.005
+excellent,0.95,760,-0.0025
+good,0.9,700,0.0
+fair,0.85,660,0.0075
+subprime,0.8,620,0.015

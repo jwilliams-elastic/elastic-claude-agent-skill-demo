@@ -1,0 +1,4 @@
+key,value
+credit_max_pct,0.25
+termination_trigger_failures,3
+cure_period_days,30

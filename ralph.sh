@@ -1,6 +1,9 @@
 #!/bin/bash
 # ralph.sh - The Autonomous Loop
 
+# wait until my plan resets. will reset in less than 1 hour
+# sleep 3600
+
 # Parse command line arguments
 PRD_FILE="${1:-PRD.md}"
 PROGRESS_FILE="${2:-progress.txt}"
@@ -14,7 +17,7 @@ if [[ "$1" == "--help" ]] || [[ "$1" == "-h" ]]; then
     echo "  PROGRESS_FILE  Path to progress file (default: progress.txt)"
     echo ""
     echo "Example:"
-    echo "  $0 PRD-E2E.md progress-e2e.txt"
+    echo "  $0 PRD.md progress.txt"
     exit 0
 fi
 

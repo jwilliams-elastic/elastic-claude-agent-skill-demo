@@ -1,0 +1,4 @@
+key,value
+growth_buffer_pct,0.2
+peak_factor,1.5
+forecast_months,12

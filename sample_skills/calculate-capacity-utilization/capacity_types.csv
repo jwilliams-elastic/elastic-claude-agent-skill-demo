@@ -1,0 +1,4 @@
+id,description,utilization_factor
+design,Maximum theoretical capacity,1.0
+effective,Adjusted for maintenance/setup,0.85
+demonstrated,Historical best performance,0.9

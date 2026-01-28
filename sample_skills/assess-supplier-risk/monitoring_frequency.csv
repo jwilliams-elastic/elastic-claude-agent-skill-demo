@@ -1,0 +1,4 @@
+id,compliance,financial,operational
+critical_suppliers,quarterly,monthly,weekly
+strategic_suppliers,semi_annual,quarterly,monthly
+standard_suppliers,annual,annual,quarterly

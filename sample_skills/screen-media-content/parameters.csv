@@ -1,0 +1,8 @@
+key,value
+version,2.1.0
+last_updated,2026-01-15
+content_descriptors_violence,"violence_mild,violence_moderate,violence_strong,violence_graphic"
+content_descriptors_language,"language_mild,language_moderate,language_strong"
+content_descriptors_nudity,"nudity_partial,nudity_explicit"
+content_descriptors_sexual,"suggestive_themes,sexual_content"
+content_descriptors_substance,"alcohol_use,tobacco_use,drug_use"

@@ -1,0 +1,7 @@
+id,description,severity
+structuring,Multiple transactions below reporting threshold,high
+rapid_movement,Funds moved quickly through account,high
+unusual_volume,Transaction volume inconsistent with profile,medium
+geographic_inconsistency,Transactions from unexpected locations,medium
+round_amounts,Multiple round-number transactions,low
+layering,Complex transaction patterns to obscure origin,high

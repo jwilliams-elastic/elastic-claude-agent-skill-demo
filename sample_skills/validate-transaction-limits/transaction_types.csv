@@ -1,0 +1,7 @@
+id,limit_multiplier,risk_weight
+purchase,1.0,1.0
+withdrawal,0.8,1.2
+transfer_internal,1.2,0.8
+transfer_external,0.7,1.5
+payment,1.0,1.0
+international,0.5,2.0

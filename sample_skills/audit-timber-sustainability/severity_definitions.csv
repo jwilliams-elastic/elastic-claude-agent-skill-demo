@@ -1,0 +1,5 @@
+key,value
+critical,Immediate threat to certification status
+major,Significant non-conformance requiring corrective action
+minor,Observation for continuous improvement
+observation,Best practice recommendation

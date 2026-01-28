@@ -1,0 +1,6 @@
+id,max_growth_pct,min_growth_pct,rebate_pct
+tier_1,0.05,0.0,0.005
+tier_2,0.1,0.05,0.01
+tier_3,0.15,0.1,0.015
+tier_4,0.2,0.15,0.02
+tier_5,,0.2,0.025

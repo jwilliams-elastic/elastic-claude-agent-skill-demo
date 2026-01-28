@@ -1,0 +1,5 @@
+id,carbon_intensity,waste_per_revenue,water_intensity
+manufacturing,200,0.05,50
+technology,50,0.01,10
+energy,500,0.1,100
+default,150,0.03,30

@@ -1,0 +1,4 @@
+id,bha,bht,fd&c blue 1,fd&c red 40,fd&c yellow 5,msg,nitrates,potassium sorbate,sodium benzoate,sulfites
+additives,,,,,,"{'max_ppm': None, 'requires_declaration': True}","{'max_ppm': 200, 'category': 'preservative'}","{'max_ppm': 1000, 'category': 'preservative'}","{'max_ppm': 1000, 'category': 'preservative'}","{'max_ppm': 10, 'category': 'preservative'}"
+preservatives,0.02,0.02,,,,,,0.1,0.1,
+colors,,,{'max_ppm': 500},{'max_ppm': 500},{'max_ppm': 300},,,,,

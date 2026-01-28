@@ -1,0 +1,6 @@
+id,base_adjustment,description
+hard_market,0.08,"Reduced capacity, rising rates"
+firming,0.04,Tightening conditions
+stable,0.0,Balanced market
+softening,-0.03,Increasing competition
+soft_market,-0.06,"Excess capacity, falling rates"

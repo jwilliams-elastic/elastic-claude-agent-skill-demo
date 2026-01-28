@@ -1,0 +1,8 @@
+category,price_elasticity,cross_elasticity,income_elasticity,description
+grocery,-1.2,0.3,0.8,Essential goods with lower price sensitivity
+apparel,-2.0,0.5,1.2,Discretionary with moderate sensitivity
+electronics,-2.5,0.7,1.5,High price sensitivity and substitutability
+home,-1.8,0.4,1.3,Moderate sensitivity with some substitutes
+beauty,-1.5,0.6,1.1,Brand loyalty reduces elasticity
+sporting_goods,-2.2,0.5,1.4,Discretionary with seasonal patterns
+toys,-2.3,0.8,1.2,High substitutability especially commodity items

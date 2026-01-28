@@ -1,0 +1,6 @@
+id,min_score,premium_multiplier
+excellent,85,1.5
+strong,70,1.2
+average,50,1.0
+weak,30,0.7
+poor,0,0.4

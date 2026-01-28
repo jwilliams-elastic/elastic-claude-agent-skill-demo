@@ -1,0 +1,7 @@
+id,metrics,unit,weight
+climate_change,"ghg_emissions,carbon_footprint,energy_consumption",kg_co2_equivalent,0.25
+water_use,"water_consumption,water_discharge,water_quality",cubic_meters,0.2
+land_use,"land_occupation,land_transformation,biodiversity_impact",hectares,0.15
+resource_depletion,"raw_material_use,fossil_fuel_use,mineral_depletion",kg_equivalent,0.15
+pollution,"air_emissions,water_pollution,soil_contamination",kg_pollutant,0.15
+waste,"solid_waste,hazardous_waste,recycling_rate",tonnes,0.1

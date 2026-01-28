@@ -1,0 +1,5 @@
+key,value
+positive,-0.1
+neutral,0
+negative,0.3
+escalation_multiplier,2.0

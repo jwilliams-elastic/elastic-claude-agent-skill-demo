@@ -1,0 +1,6 @@
+id,frequency,label
+1,Less than once in 10 years,Rare
+2,Once in 5-10 years,Unlikely
+3,Once in 1-5 years,Possible
+4,Once per year,Likely
+5,Multiple times per year,Almost Certain

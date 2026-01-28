@@ -1,0 +1,4 @@
+key,value
+sample_size_pct,0.1
+min_sample_size,1000
+max_sample_size,100000

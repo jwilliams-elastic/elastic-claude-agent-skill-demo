@@ -1,0 +1,6 @@
+id,max,min,risk_level
+excellent,850,750,very_low
+good,749,700,low
+fair,699,650,moderate
+poor,649,550,high
+very_poor,549,300,very_high

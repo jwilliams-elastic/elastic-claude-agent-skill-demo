@@ -1,0 +1,6 @@
+id,limit_reduction,verification
+first_time_recipient,0.5,required
+high_risk_country,0.3,enhanced
+new_device,0.6,required
+unusual_time,0.8,optional
+large_round_amount,0.9,optional

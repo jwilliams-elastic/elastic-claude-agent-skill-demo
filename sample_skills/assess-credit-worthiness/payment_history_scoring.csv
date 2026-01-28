@@ -1,0 +1,7 @@
+key,value
+no_late_payments,100
+30_days_late_1,80
+30_days_late_2_plus,60
+60_days_late,40
+90_days_late,20
+collection_bankruptcy,0

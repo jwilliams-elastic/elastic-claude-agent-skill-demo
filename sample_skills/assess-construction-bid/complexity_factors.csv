@@ -1,0 +1,3 @@
+id,CA,FL,NY,TX,commercial,education,healthcare,industrial,residential_multi
+base_months_per_10k_sqft,,,,,3,3.5,5,2.5,4
+weather_adjustment,0.95,1.05,1.1,1.0,,,,,

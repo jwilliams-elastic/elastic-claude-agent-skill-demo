@@ -1,0 +1,4 @@
+id,on_booking,on_delivery,on_payment,on_renewal_date
+standard,0.5,,0.5,
+services,,1.0,,
+renewals,,,,1.0

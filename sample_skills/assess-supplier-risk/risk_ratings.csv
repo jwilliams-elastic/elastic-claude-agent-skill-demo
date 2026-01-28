@@ -1,0 +1,6 @@
+id,action,score_range
+critical,immediate_mitigation,"{'min': 80, 'max': 100}"
+high,active_monitoring,"{'min': 60, 'max': 79}"
+medium,periodic_review,"{'min': 40, 'max': 59}"
+low,standard_monitoring,"{'min': 20, 'max': 39}"
+minimal,routine_oversight,"{'min': 0, 'max': 19}"

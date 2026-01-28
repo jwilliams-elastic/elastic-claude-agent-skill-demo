@@ -1,0 +1,6 @@
+id,min_percentile,multiplier
+exceptional,90,1.25
+above_average,75,1.1
+average,50,1.0
+below_average,25,0.85
+needs_improvement,0,0.7

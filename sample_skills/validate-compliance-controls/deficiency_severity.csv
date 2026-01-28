@@ -1,0 +1,4 @@
+id,remediation_timeline_days,reporting_required,threshold
+material_weakness,90,True,reasonable_possibility_of_material_misstatement
+significant_deficiency,180,True,less_severe_than_material_weakness
+control_deficiency,365,False,design_or_operation_gap

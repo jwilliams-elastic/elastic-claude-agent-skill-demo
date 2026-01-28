@@ -1,0 +1,4 @@
+id,measurement,types
+quantitative,numeric_comparison,"financial,operational,statistical"
+qualitative,survey_assessment,"satisfaction,perception,capability"
+behavioral,observation_tracking,"adoption,compliance,practice_change"

@@ -1,0 +1,5 @@
+id,accelerator_rate,accelerator_threshold,base_rate,description,margin_rate,quota_rate,tiers
+flat_rate,,,0.05,Fixed percentage of sales,,,
+tiered,,,,Increasing rates based on volume,,,"{'threshold': 0, 'rate': 0.05},{'threshold': 50000, 'rate': 0.07},{'threshold': 100000, 'rate': 0.1},{'threshold': 200000, 'rate': 0.12}"
+quota_based,0.12,1.2,0.05,Accelerators above quota,,0.08,
+gross_margin,,,,Commission on gross margin,0.15,,

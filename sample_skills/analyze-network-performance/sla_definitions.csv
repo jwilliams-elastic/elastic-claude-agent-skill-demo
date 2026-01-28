@@ -1,0 +1,4 @@
+id,availability,max_latency,max_packet_loss,mttr_hours
+premium,99.99,50,0.01,1
+standard,99.9,100,0.1,4
+basic,99.5,200,1.0,8

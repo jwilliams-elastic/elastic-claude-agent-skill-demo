@@ -1,0 +1,11 @@
+requirement_id,requirement_name,regulation,mandatory,description
+SEC-001,Encryption in Transit,HIPAA,true,TLS 1.2+ for all PHI transmission
+SEC-002,Encryption at Rest,HIPAA,true,AES-256 encryption for stored PHI
+SEC-003,Access Controls,HIPAA,true,Role-based access with authentication
+SEC-004,Audit Logging,HIPAA,true,Log all PHI access and modifications
+SEC-005,SMART on FHIR,ONC,conditional,OAuth 2.0 for third-party app authorization
+SEC-006,Session Management,HIPAA,true,Automatic timeout and session controls
+SEC-007,Integrity Controls,HIPAA,true,Data integrity verification
+SEC-008,Emergency Access,HIPAA,true,Break-glass procedures documented
+SEC-009,Breach Notification,HIPAA,true,60-day notification procedures
+SEC-010,Risk Assessment,HIPAA,true,Annual security risk assessment

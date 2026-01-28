@@ -1,0 +1,6 @@
+id,code,description
+approved,APPROVED,Transaction within all limits
+soft_decline,SOFT_DECLINE,Requires additional verification
+hard_decline,HARD_DECLINE,"Exceeds hard limits, cannot proceed"
+review_required,REVIEW,Manual review required
+hold,HOLD,Transaction held pending verification

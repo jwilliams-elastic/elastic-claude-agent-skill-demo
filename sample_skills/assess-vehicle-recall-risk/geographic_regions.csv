@@ -1,0 +1,7 @@
+id,climate_factor,heat_factor,humidity_factor,salt_exposure,terrain_factor
+northeast,1.2,,,True,
+southeast,1.0,,1.3,,
+midwest,1.3,,,True,
+southwest,1.1,1.4,,,
+west,1.0,,,,1.1
+northwest,1.1,,1.2,,

@@ -1,0 +1,6 @@
+id,min_score,multiplier
+dominant,85,1.5
+strong,70,1.25
+average,50,1.0
+weak,30,0.75
+distressed,0,0.5

@@ -1,0 +1,6 @@
+id,amber,green,red
+system_downtime_hours,8,4,24
+failed_transactions_pct,0.5,0.1,1.0
+employee_turnover_pct,15,10,25
+audit_findings_count,10,5,20
+incident_count,25,10,50

@@ -1,0 +1,7 @@
+id,max_jitter,max_latency,max_packet_loss
+voip,30,150,1.0
+video_conferencing,30,150,0.5
+video_streaming,100,500,2.0
+web_application,50,200,1.0
+database,20,50,0.1
+file_transfer,100,500,0.5

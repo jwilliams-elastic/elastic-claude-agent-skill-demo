@@ -1,0 +1,7 @@
+key,value
+discount_rate,0.055
+salary_growth,0.03
+expected_return,0.07
+inflation,0.025
+mortality_table,RP-2014
+retirement_age,65

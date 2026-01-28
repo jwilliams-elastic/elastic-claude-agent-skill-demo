@@ -1,0 +1,6 @@
+id,target_gross_margin,typical_contribution_margin
+manufacturing,0.35,0.4
+retail,0.25,0.3
+software,0.75,0.85
+services,0.45,0.55
+food_beverage,0.3,0.35

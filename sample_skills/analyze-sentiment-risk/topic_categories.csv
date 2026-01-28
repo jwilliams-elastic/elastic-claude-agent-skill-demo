@@ -1,0 +1,7 @@
+id,keywords,risk_weight
+product_quality,"defect,broken,quality,issue",1.2
+customer_service,"service,support,response,help",1.0
+pricing,"price,cost,expensive,value",0.8
+leadership,"ceo,executive,management,leadership",1.5
+financial,"earnings,revenue,profit,loss",1.4
+legal,"lawsuit,legal,court,settlement",1.8

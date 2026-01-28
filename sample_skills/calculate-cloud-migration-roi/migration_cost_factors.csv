@@ -1,0 +1,6 @@
+strategy,effort_multiplier,risk_contingency,timeline_factor,description
+rehost,1.0,0.15,1.0,Lift and shift with minimal changes
+replatform,1.5,0.25,1.3,Moderate optimization for cloud
+refactor,2.5,0.40,2.0,Re-architect for cloud-native
+repurchase,0.5,0.20,0.8,Replace with SaaS equivalent
+retain,0.1,0.05,0.2,Keep on-premises with hybrid connectivity

@@ -1,0 +1,6 @@
+key,value
+board_independence_min,0.5
+board_diversity_target,0.3
+required_committees,"audit,compensation,nominating"
+ceo_chair_separation,True
+executive_clawback_policy,True

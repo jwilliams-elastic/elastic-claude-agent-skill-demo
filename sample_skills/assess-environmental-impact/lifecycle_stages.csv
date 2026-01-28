@@ -1,0 +1,6 @@
+id,typical_impact_share
+raw_materials,0.3
+manufacturing,0.25
+transportation,0.1
+use_phase,0.25
+end_of_life,0.1

@@ -1,0 +1,4 @@
+id,EU-AVG,UK,US-AVG,US-CAMX,US-ERCT,US-MROE,US-NWPP,US-RFCE,US-SRMW,US-WECC,factor,unit
+electricity,0.3,0.21,0.42,0.24,0.4,0.55,0.28,0.38,0.6,0.32,,kg_co2e_per_kwh
+steam,,,,,,,,,,,55,kg_co2e_per_mmbtu
+chilled_water,,,,,,,,,,,0.25,kg_co2e_per_ton_hour

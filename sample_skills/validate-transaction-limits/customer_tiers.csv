@@ -1,0 +1,6 @@
+id,daily_cumulative,monthly_cumulative,single_transaction,velocity_limit,weekly_cumulative
+basic,3000,25000,1000,"{'count': 10, 'window_hours': 24}",10000
+standard,15000,100000,5000,"{'count': 25, 'window_hours': 24}",50000
+premium,75000,500000,25000,"{'count': 50, 'window_hours': 24}",200000
+corporate,500000,5000000,100000,"{'count': 200, 'window_hours': 24}",1500000
+institutional,5000000,50000000,1000000,"{'count': 500, 'window_hours': 24}",15000000

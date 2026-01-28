@@ -1,0 +1,6 @@
+id,capacity_hours_week,cost_per_hour,productive_ratio
+developer,40,125,0.8
+analyst,40,95,0.85
+designer,40,110,0.75
+manager,40,150,0.6
+consultant,40,200,0.9

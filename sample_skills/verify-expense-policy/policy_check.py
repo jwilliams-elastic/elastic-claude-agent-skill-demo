@@ -5,16 +5,120 @@ Implements proprietary business rules for expense validation that cannot be
 inferred without access to company policy documentation.
 """
 
-import json
+import csv
 from pathlib import Path
 from typing import Dict, List, Optional, Any
 
 
+
+def load_csv_as_dict(filename: str, key_column: str = 'id') -> Dict[str, Dict[str, Any]]:
+    """Load a CSV file and return as dictionary keyed by specified column."""
+    csv_path = Path(__file__).parent / filename
+    result = {}
+    with open(csv_path, 'r') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            key = row.pop(key_column, row.get('key', ''))
+            # Convert numeric values
+            for k, v in list(row.items()):
+                if v == '':
+                    continue
+                try:
+                    if '.' in str(v):
+                        row[k] = float(v)
+                    else:
+                        row[k] = int(v)
+                except (ValueError, TypeError):
+                    pass
+            result[key] = row
+    return result
+
+
+def load_csv_as_list(filename: str) -> List[Dict[str, Any]]:
+    """Load a CSV file and return as list of dictionaries."""
+    csv_path = Path(__file__).parent / filename
+    result = []
+    with open(csv_path, 'r') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            # Convert numeric values
+            for k, v in list(row.items()):
+                if v == '':
+                    continue
+                try:
+                    if '.' in str(v):
+                        row[k] = float(v)
+                    else:
+                        row[k] = int(v)
+                except (ValueError, TypeError):
+                    pass
+            result.append(row)
+    return result
+
+
+def load_parameters(filename: str = 'parameters.csv') -> Dict[str, Any]:
+    """Load parameters CSV as key-value dictionary."""
+    csv_path = Path(__file__).parent / filename
+    if not csv_path.exists():
+        return {}
+    result = {}
+    with open(csv_path, 'r') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            key = row.get('key', '')
+            value = row.get('value', '')
+            try:
+                if '.' in str(value):
+                    result[key] = float(value)
+                else:
+                    result[key] = int(value)
+            except (ValueError, TypeError):
+                if value.lower() == 'true':
+                    result[key] = True
+                elif value.lower() == 'false':
+                    result[key] = False
+                else:
+                    result[key] = value
+    return result
+
+def load_key_value_csv(filename: str) -> Dict[str, Any]:
+    """Load a key-value CSV file as a flat dictionary."""
+    csv_path = Path(__file__).parent / filename
+    result = {}
+    with open(csv_path, 'r') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            key = row.get('key', row.get('id', ''))
+            value = row.get('value', '')
+            try:
+                if '.' in str(value):
+                    result[key] = float(value)
+                else:
+                    result[key] = int(value)
+            except (ValueError, TypeError):
+                if str(value).lower() == 'true':
+                    result[key] = True
+                elif str(value).lower() == 'false':
+                    result[key] = False
+                else:
+                    result[key] = value
+    return result
+
+
 def load_allowance_table() -> Dict[str, Any]:
-    """Load the allowance table configuration."""
-    config_path = Path(__file__).parent / "allowance_table.json"
-    with open(config_path, 'r') as f:
-        return json.load(f)
+    """Load configuration data from CSV files."""
+    category_limits_data = load_csv_as_dict("category_limits.csv")
+    approval_thresholds_data = load_csv_as_dict("approval_thresholds.csv")
+    special_rules_data = load_key_value_csv("special_rules.csv")
+    metadata_data = load_key_value_csv("metadata.csv")
+    params = load_parameters()
+    return {
+        "category_limits": category_limits_data,
+        "approval_thresholds": approval_thresholds_data,
+        "special_rules": special_rules_data,
+        "metadata": metadata_data,
+        **params
+    }
 
 
 def verify_expense(

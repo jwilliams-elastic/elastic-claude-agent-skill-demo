@@ -46,7 +46,12 @@ print(f"Required Actions: {result['required_actions']}")
 finance, compliance, expense-management, policy-enforcement
 
 ## Implementation
-The actual policy logic is implemented in `policy_check.py` and references allowance data from `allowance_table.json`.
+The actual policy logic is implemented in `policy_check.py` and references allowance data from CSV files:
+- `category_limits.csv` - Reference data
+- `approval_thresholds.csv` - Reference data
+- `special_rules.csv` - Reference data
+- `metadata.csv` - Reference data
+- `parameters.csv` - Reference data.
 
 ## Test Execution
 ```python

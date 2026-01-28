@@ -1,0 +1,7 @@
+id,decay_rate,description,half_life_days,model_type,weights
+last_touch,,100% credit to last touchpoint,,,{'last': 1.0}
+first_touch,,100% credit to first touchpoint,,,{'first': 1.0}
+linear,,Equal credit to all touchpoints,,,{'equal': True}
+time_decay,0.5,More credit to recent touchpoints,7,,
+position_based,,"40% first, 40% last, 20% middle",,,"{'first': 0.4, 'last': 0.4, 'middle': 0.2}"
+data_driven,,ML-based attribution,,shapley,

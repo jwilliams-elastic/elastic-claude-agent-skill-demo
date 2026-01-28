@@ -36,7 +36,7 @@ Samples with turbidity_index > 0.8 indicate lipemia, hemolysis, or icterus and M
 Storage temperature MUST be maintained between -80°C and -70°C (strict). Samples outside this range are considered compromised. This range is specific to our cryopreservation validation studies.
 
 ### Rule 4: Minimum Volume Requirements
-Each sample type has minimum volume requirements loaded from biomarker_constraints.json based on the panel of assays to be performed.
+Each sample type has minimum volume requirements loaded from CSV files (sample_types.csv, turbidity_thresholds.csv, quality_control_notes.csv, parameters.csv) based on the panel of assays to be performed.
 
 ## Output Format
 ```json

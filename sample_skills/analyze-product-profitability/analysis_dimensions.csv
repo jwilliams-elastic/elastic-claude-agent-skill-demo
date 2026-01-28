@@ -1,0 +1,5 @@
+id,granularity
+product_line,line
+sku,item
+category,group
+channel,distribution

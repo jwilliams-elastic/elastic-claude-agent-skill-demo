@@ -1,0 +1,5 @@
+key,value
+minimum_claim_value,2500
+auto_close_below,1000
+priority_threshold,25000
+statute_warning_days,180

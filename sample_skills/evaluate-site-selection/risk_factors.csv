@@ -1,0 +1,4 @@
+id,high_risk_regions,scores,union_density_high
+natural_disaster,"coastal,tornado_alley,flood_zone",,
+political_stability,,"{'stable': 100, 'moderate': 70, 'unstable': 40}",
+labor_relations,,,0.2

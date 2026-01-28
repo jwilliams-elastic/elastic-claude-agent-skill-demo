@@ -1,0 +1,5 @@
+id,high,low,medium
+real_estate,50,10,25
+labor_hourly,40,15,25
+electricity_kwh,0.15,0.06,0.1
+property_tax_rate,0.03,0.01,0.02

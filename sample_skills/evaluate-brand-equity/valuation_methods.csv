@@ -1,0 +1,4 @@
+id,brand_contribution_factor,creation_cost_factor,description,discount_rate,growth_rate,maintenance_cost_factor,profit_multiple_range,revenue_multiple_range
+income_approach,0.25,,NPV of brand-attributed earnings,0.1,0.03,,,
+market_approach,,,Comparable brand transactions,,,,"{'min': 5, 'max': 20}","{'min': 0.5, 'max': 3.0}"
+cost_approach,,1.0,Brand development cost,,,0.15,,

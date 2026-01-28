@@ -1,0 +1,4 @@
+id,description,drivers
+activity_based,Allocate costs based on activities consumed,"labor_hours,machine_hours,setups,orders"
+volume_based,Allocate costs based on production volume,"units_produced,revenue"
+direct,Direct cost assignment only,

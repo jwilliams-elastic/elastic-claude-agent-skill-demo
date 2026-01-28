@@ -1,0 +1,4 @@
+id,avg_churn_rate,avg_logins_30d,avg_tenure_months
+smb,0.08,15,14
+mid_market,0.05,25,22
+enterprise,0.02,40,36

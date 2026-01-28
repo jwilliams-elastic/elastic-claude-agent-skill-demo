@@ -1,0 +1,8 @@
+id,benchmarks,weight
+revenue,"{'growth_target': 0.1, 'decline_threshold': -0.05}",0.25
+margin,"{'target': 0.4, 'minimum': 0.25}",0.2
+market_coverage,"{'target': 0.8, 'minimum': 0.6}",0.15
+customer_acquisition_cost,"{'target_ratio_to_ltv': 0.25, 'maximum_ratio': 0.4}",0.15
+conversion_rate,"{'target': 0.03, 'minimum': 0.01}",0.1
+customer_satisfaction,"{'target_nps': 40, 'minimum_nps': 20}",0.1
+inventory_turnover,"{'target': 8, 'minimum': 4}",0.05

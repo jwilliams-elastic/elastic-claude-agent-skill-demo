@@ -1,0 +1,6 @@
+id,description,min
+excellent,World-class brand advocacy,50
+good,Strong brand advocacy,30
+average,Neutral brand perception,0
+poor,Significant brand challenges,-50
+critical,Brand crisis,-100

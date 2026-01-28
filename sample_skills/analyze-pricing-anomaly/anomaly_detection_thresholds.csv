@@ -1,0 +1,5 @@
+key,value
+price_deviation_pct,0.15
+volume_deviation_pct,0.25
+margin_deviation_pct,0.1
+discount_threshold_pct,0.3

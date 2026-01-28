@@ -1,0 +1,5 @@
+key,value
+gross_margin_calculation,revenue_minus_cogs
+contribution_margin_calculation,gross_margin_minus_variable_costs
+channel_profit_calculation,contribution_minus_allocated_fixed_costs
+cost_allocation_methods,"revenue_based,activity_based,headcount_based"

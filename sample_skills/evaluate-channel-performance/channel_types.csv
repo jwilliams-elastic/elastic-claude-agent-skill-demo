@@ -1,0 +1,8 @@
+id,cost_structure,description,typical_margin_range
+direct_sales,fixed_plus_commission,Company-employed sales force,"{'min': 0.6, 'max': 0.8}"
+distributor,margin_based,Third-party wholesale distribution,"{'min': 0.4, 'max': 0.55}"
+reseller,margin_based,Value-added resellers,"{'min': 0.45, 'max': 0.6}"
+retail,margin_plus_fees,Physical retail locations,"{'min': 0.35, 'max': 0.5}"
+ecommerce_direct,variable,Company-owned online store,"{'min': 0.55, 'max': 0.75}"
+marketplace,commission_based,Third-party online marketplaces,"{'min': 0.4, 'max': 0.6}"
+affiliate,performance_based,Affiliate marketing partners,"{'min': 0.5, 'max': 0.7}"
