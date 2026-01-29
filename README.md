@@ -2,6 +2,8 @@
 
 A demonstration of using Elasticsearch as a backend for Claude agent skills via the Model Context Protocol (MCP). This repository contains Python scripts, JSON configurations, and sample domain-specific skills showcasing proprietary business logic retrieval.
 
+![Elastic Agent Skill Hot Load](./elastic_agent_skill_hot_load.jpg)
+
 ## Quick Start
 
 ### 1. Install Dependencies

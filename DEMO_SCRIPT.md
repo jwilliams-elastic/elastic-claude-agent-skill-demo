@@ -4,6 +4,36 @@ This demo script showcases how a Claude agent can discover, retrieve, and execut
 
 ---
 
+## Happy Path - Showcases full power of Agent Builder and Workflows
+
+#### Easy Prompts
+- How many skills do you have? by domain?
+- I need to submit an expense report for a team dinner that cost $850 for 10 people. Can you check if this meets our company policy?
+- Can you update your skills? I just got a slack from HR that our expense policy was recently updated.
+- I need to submit an expense report for a team dinner that cost $850 for 10 people. Can you check if this meets our company policy?
+
+#### Hard Prompts
+- How does Tesla's direct-to-consumer sales model work and how many states ban it? 
+
+#### Tricky Prompt - Uses "tesla" and "assess-digital-transformaion-readiness" skills
+Can you run a digital transformation assessment comparison for Ford Motor Company vs Tesla? We have good knowledge on Tesla but not Ford. Here's what I know about Ford:
+                                                                                                   
+legacy: 58%                                                                                                
+cloud: 38%                                                                                               
+analytics: diagnostic                                                                                              
+ditital talent: 28%                                                                                               
+agile team: 42%                                                                                                   
+process automation rate: 4%
+
+**The "assess-digital-transformation-readiness" skill requires user inputs. These are derived for tesla from that skill but the user is providing for Ford because the consultant agent has no knowledge of Ford**
+
+#### Final Prompt - Give me tips for my next pitch with Ford (answers based on current context - no RAG/web/skill lookups)
+
+Can you summarize the business rules for digital transform readiness in case I need to reference for a cranky CTO?
+
+It looks like I need to land the Ford account b/c Tesla is ahead of the curve. Thoughts on how to pitch the head of digital transformation?
+
+
 ## Scenario 1: Finance - Expense Policy Verification
 
 ### User Request

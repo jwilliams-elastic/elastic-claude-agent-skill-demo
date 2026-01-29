@@ -1,0 +1,23 @@
+{
+  "id": "search_and_retrieve_skill_files",
+  "type": "esql",
+  "description": "Search for agent skills and retrieve their associated files in a single query. Supports semantic text search on skill content and optional tag filtering. Uses LOOKUP JOIN to combine skill search results with file contents including Python scripts, JSON configs, and data files.",
+  "tags": ["consultant agent skills"],
+  "configuration": {
+    "query": "FROM agent_skills METADATA _score \n| EVAL tags_str = MV_CONCAT(tags, \",\") \n| WHERE (name: ?query OR description: ?query OR short_description: ?query OR examples: ?query OR semantic_content: ?query) AND tags_str RLIKE ?tag \n| SORT _score DESC \n| LIMIT ?limit \n| LOOKUP JOIN agent_skill_files ON skill_id \n| KEEP skill_id, name, domain, tags, rating, file_name, file_path, file_type, file_content",
+    "params": {
+      "query": {
+        "type": "text",
+        "description": "Natural language search query to find relevant skills"
+      },
+      "tag": {
+        "type": "keyword",
+        "description": "Regex pattern to filter by tags (e.g., '.*finance.*', '.*compliance.*'). Use '.*' to match all tags."
+      },
+      "limit": {
+        "type": "integer",
+        "description": "Maximum number of skills to return (default: 5). Note: each skill may have multiple files."
+      }
+    }
+  }
+}

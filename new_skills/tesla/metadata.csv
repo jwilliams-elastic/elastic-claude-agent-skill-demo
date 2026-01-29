@@ -8,3 +8,9 @@ document_type,Company Profile
 company,Tesla
 industry,Automotive
 topics,"Business Model, Customer Journey, Manufacturing, Battery Technology, Sales Strategy"
+legacy_system_percentage,12
+cloud_adoption_percentage,78
+analytics_maturity,predictive
+digital_talent_percentage,72
+agile_team_percentage,75
+process_automation_rate,82
