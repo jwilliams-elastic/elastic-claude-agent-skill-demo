@@ -1,0 +1,10 @@
+variable,value,description
+yearly_salary,100000,Average yearly salary per user for productivity calculations
+months_per_year,12,Number of months in a year for annualization
+security_threshold_low,0.89,Security rating above this is low risk (1.15x)
+security_threshold_moderate,0.69,Security rating above this is moderate risk (2.0x)
+security_threshold_high,0.49,Security rating above this is high risk (10.0x)
+security_multiplier_low,1.15,Risk multiplier for security rating > 89%
+security_multiplier_moderate,2.0,Risk multiplier for security rating > 69%
+security_multiplier_high,10.0,Risk multiplier for security rating > 49%
+security_multiplier_critical,20.0,Risk multiplier for security rating <= 49%
