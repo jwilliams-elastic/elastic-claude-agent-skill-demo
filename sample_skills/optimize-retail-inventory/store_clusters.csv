@@ -1,4 +1,0 @@
-id,demand_multiplier,description,service_level_target
-A,1.5,High volume flagship stores,0.98
-B,1.0,Standard volume stores,0.95
-C,0.7,Lower volume stores,0.92

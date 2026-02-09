@@ -1,6 +1,0 @@
-id,check_frequency,description
-single_transaction,per_transaction,Maximum amount per individual transaction
-daily_cumulative,daily_aggregation,Maximum total amount per day
-weekly_cumulative,weekly_aggregation,Maximum total amount per week
-monthly_cumulative,monthly_aggregation,Maximum total amount per month
-velocity,rolling_window,Maximum number of transactions in time window

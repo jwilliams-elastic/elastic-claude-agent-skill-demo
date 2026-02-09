@@ -1,6 +1,0 @@
-id,risk_level,sentiment_score_max
-critical,5,0.25
-high,4,0.35
-elevated,3,0.45
-moderate,2,0.55
-low,1,1.0

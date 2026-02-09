@@ -1,9 +1,0 @@
-exception_id,exception_name,description,documentation_required,time_limited
-preventing_harm,Preventing Harm,Reasonably believe disclosure will cause harm,true,false
-privacy,Privacy,Patient has not consented to disclosure,true,false
-security,Security,Necessary to protect system security,true,true
-infeasibility,Infeasibility,Technically infeasible to provide access,true,true
-health_it_performance,Health IT Performance,Necessary for system maintenance,true,true
-content_and_manner,Content and Manner,Offering alternative means of access,true,false
-fees,Fees,Reasonable fees for access,true,false
-licensing,Licensing,Reasonable licensing terms required,true,false

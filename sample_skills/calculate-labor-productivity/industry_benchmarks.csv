@@ -1,6 +1,0 @@
-id,labor_cost_ratio,output_per_hour,revenue_per_employee,utilization_rate
-manufacturing,"{'target': 0.25, 'unit': 'percent'}","{'target': 45, 'unit': 'units'}","{'target': 250000, 'unit': 'USD'}","{'target': 0.85, 'unit': 'percent'}"
-retail,"{'target': 0.15, 'unit': 'percent'}","{'target': 150, 'unit': 'USD_sales'}","{'target': 180000, 'unit': 'USD'}","{'target': 0.8, 'unit': 'percent'}"
-professional_services,"{'target': 0.5, 'unit': 'percent'}","{'target': 200, 'unit': 'USD_billed'}","{'target': 200000, 'unit': 'USD'}","{'target': 0.75, 'unit': 'percent'}"
-healthcare,"{'target': 0.55, 'unit': 'percent'}","{'target': 8, 'unit': 'patients'}","{'target': 150000, 'unit': 'USD'}","{'target': 0.82, 'unit': 'percent'}"
-technology,"{'target': 0.35, 'unit': 'percent'}","{'target': 250, 'unit': 'USD_value'}","{'target': 350000, 'unit': 'USD'}","{'target': 0.78, 'unit': 'percent'}"

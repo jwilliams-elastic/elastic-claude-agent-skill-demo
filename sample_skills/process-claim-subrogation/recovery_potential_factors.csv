@@ -1,6 +1,0 @@
-id,score_clear,score_complete,score_disputed,score_full,score_minimal,score_moderate,score_no,score_none,score_partial,score_strong,score_unknown,score_weak,score_yes,weight
-liability_clear,90,,40,,,,,,,,20,,,0.3
-at_fault_party_insured,,,,,,,30,,,,50,,85,0.25
-evidence_quality,,,,,,60,,,,90,,25,,0.2
-damages_documented,,90,,,20,,,,55,,,,,0.15
-cooperation_level,,,,90,,,,10,50,,,,,0.1

@@ -1,4 +1,0 @@
-id,action,max_score,min_score,requires
-auto_approve,,,98,"no_pricing_errors,no_calculation_errors"
-review_required,,97,90,
-reject,return_for_correction,89,,

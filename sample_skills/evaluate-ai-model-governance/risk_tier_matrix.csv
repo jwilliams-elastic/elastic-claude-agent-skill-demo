@@ -1,5 +1,0 @@
-tier,min_risk_score,max_risk_score,description,validation_frequency,explainability_required,human_override_required
-Tier 1,80,100,Critical business decisions with full autonomy,quarterly,true,true
-Tier 2,60,79,High-impact decisions with human assistance,semi_annual,true,true
-Tier 3,40,59,Medium-impact internal processes,annual,false,false
-Tier 4,0,39,Low-impact analytical support,annual,false,false

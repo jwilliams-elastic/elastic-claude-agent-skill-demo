@@ -1,5 +1,0 @@
-id,max_dti,min_down_pct,min_score
-mortgage,0.43,0.03,620
-auto_loan,0.5,0.1,580
-personal_loan,0.4,0,600
-credit_card,0.45,,550

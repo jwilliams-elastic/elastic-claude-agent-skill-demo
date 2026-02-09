@@ -1,4 +1,0 @@
-id,applicable_types,description
-retroactive,volume_based,Apply highest tier rate to all volume
-incremental,"volume_based,growth_based",Apply tier rate only to volume in that tier
-all_or_nothing,market_share,Full rebate only if target met

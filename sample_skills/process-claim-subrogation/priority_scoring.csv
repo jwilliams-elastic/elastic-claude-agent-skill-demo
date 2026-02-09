@@ -1,5 +1,0 @@
-id,action,min_score
-high,immediate_pursuit,75
-medium,standard_pursuit,50
-low,delayed_pursuit,25
-minimal,evaluate_close,0

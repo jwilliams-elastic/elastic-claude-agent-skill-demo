@@ -1,5 +1,0 @@
-key,value
-daily_transaction_count,10
-daily_amount_threshold,50000
-weekly_amount_threshold,200000
-monthly_amount_threshold,500000

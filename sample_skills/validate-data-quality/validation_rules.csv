@@ -1,7 +1,0 @@
-id,dimension,severity
-null_check,completeness,high
-format_validation,validity,medium
-range_check,accuracy,medium
-referential_integrity,consistency,high
-duplicate_detection,uniqueness,medium
-freshness_check,timeliness,low

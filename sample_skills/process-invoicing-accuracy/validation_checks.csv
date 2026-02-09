@@ -1,5 +1,0 @@
-id,calculation_tolerance,contract_rate_variance_max,discount_limit_check,exemption_documentation_required,line_total_vs_header_tolerance,list_price_variance_max,rate_variance_tolerance,required_fields,tax_total_reconciliation
-line_item,0.01,,,,,,,"description,quantity,unit_price,amount",
-pricing,,0.0,True,,,0.05,,,
-tax,,,,True,,,0.001,,
-totals,,,,,0.01,,,,True

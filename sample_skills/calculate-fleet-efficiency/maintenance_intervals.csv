@@ -1,5 +1,0 @@
-id,brake_inspection,oil_change,tire_rotation,transmission_service
-semi,50000,15000,25000,100000
-box_truck,40000,10000,20000,75000
-van,30000,7500,15000,60000
-default,40000,10000,20000,

@@ -1,14 +1,26 @@
 {
   "id": "get_skill_metadata",
   "type": "esql",
-  "description": "Retrieve lightweight metadata for a skill without the full content. Returns skill information excluding large fields like skill_markdown and full description.",
+  "description": "Retrieve lightweight metadata for skills by skill_id or by multiple tags (up to 3). Returns skill information excluding large fields like skill_markdown and full description.",
   "tags": ["consultant agent skills"],
   "configuration": {
-    "query": "FROM agent_skills \n| WHERE skill_id == ?skill_id \n| KEEP skill_id, name, domain, tags, author, version, rating, created_at",
+    "query": "FROM agent_skills \n| WHERE skill_id == ?skill_id OR MV_CONTAINS(tags, ?tag1) OR MV_CONTAINS(tags, ?tag2) OR MV_CONTAINS(tags, ?tag3) \n| KEEP skill_id, name, domain, tags, author, version, rating, created_at",
     "params": {
       "skill_id": {
-        "type": "keyword",
-        "description": "Unique identifier for the skill"
+        "type": "string",
+        "description": "Unique identifier for the skill (optional if tags provided)"
+      },
+      "tag1": {
+        "type": "string",
+        "description": "First tag to search for (optional if skill_id provided)"
+      },
+      "tag2": {
+        "type": "string",
+        "description": "Second tag to search for (optional)"
+      },
+      "tag3": {
+        "type": "string",
+        "description": "Third tag to search for (optional)"
       }
     }
   }

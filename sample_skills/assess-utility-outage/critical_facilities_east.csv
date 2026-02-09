@@ -1,3 +1,0 @@
-backup_power_hours,name,priority,type
-8,Nursing Home East,high,nursing_home
-24,Fire Station 8,critical,fire_station

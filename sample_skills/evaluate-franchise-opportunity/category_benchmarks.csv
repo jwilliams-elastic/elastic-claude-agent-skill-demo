@@ -1,6 +1,0 @@
-id,avg_cash_on_cash,avg_ebitda_margin,avg_payback_years,avg_revenue
-QSR,0.2,0.12,4,1100000
-fast_casual,0.22,0.14,3.5,1300000
-fitness,0.28,0.25,3,800000
-services,0.35,0.3,2.5,500000
-retail,0.15,0.1,5,900000

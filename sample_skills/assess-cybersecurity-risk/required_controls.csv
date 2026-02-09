@@ -1,9 +1,0 @@
-id,category,name,recommendation,required,severity
-mfa,access_control,Multi-Factor Authentication,Implement MFA for all user accounts,True,critical
-encryption,data_protection,Data Encryption,Enable encryption at rest and in transit,True,high
-patching,vulnerability_management,Patch Management,Implement automated patch management,True,critical
-backup,resilience,Data Backup,Implement 3-2-1 backup strategy,True,high
-endpoint_protection,endpoint_security,Endpoint Protection,Deploy EDR solution on all endpoints,True,high
-network_segmentation,network_security,Network Segmentation,Implement network segmentation for critical systems,True,medium
-logging,monitoring,Security Logging,Centralize security logs and enable alerting,True,medium
-incident_response,governance,Incident Response Plan,Develop and test incident response plan,True,high

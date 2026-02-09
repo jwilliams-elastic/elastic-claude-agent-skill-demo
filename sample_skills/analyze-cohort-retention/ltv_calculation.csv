@@ -1,5 +1,0 @@
-key,value
-average_revenue_per_user,required
-gross_margin,required
-discount_rate,0.1
-churn_rate_source,retention_data

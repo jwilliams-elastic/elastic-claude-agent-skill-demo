@@ -1,7 +1,0 @@
-factor,low_score,medium_score,high_score,weight,description
-app_portfolio_size,<50,50-200,>200,0.20,Combined application count
-cloud_heterogeneity,Same cloud,Different clouds,Hybrid/on-prem,0.20,Cloud provider alignment
-tech_debt,Low,Medium,High/Critical,0.20,Target technical debt rating
-data_architecture,Aligned,Partially aligned,Misaligned,0.15,Data model compatibility
-api_maturity,Modern APIs,Mixed,Legacy interfaces,0.15,Integration interface quality
-strategy_complexity,Preservation,Absorption,Transformation,0.10,Integration strategy choice

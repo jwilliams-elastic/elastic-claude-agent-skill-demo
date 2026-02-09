@@ -1,4 +1,0 @@
-id,bod,cod,day,night,nox,ph,pm10,pm25,sox,tss
-air_quality,,,,,"{'limit': 40, 'unit': 'ug_per_m3'}",,"{'limit': 50, 'unit': 'ug_per_m3'}","{'limit': 25, 'unit': 'ug_per_m3'}","{'limit': 20, 'unit': 'ug_per_m3'}",
-water_discharge,"{'limit': 30, 'unit': 'mg_per_l'}","{'limit': 125, 'unit': 'mg_per_l'}",,,,"{'min': 6, 'max': 9}",,,,"{'limit': 35, 'unit': 'mg_per_l'}"
-noise,,,"{'limit': 65, 'unit': 'dB'}","{'limit': 55, 'unit': 'dB'}",,,,,,

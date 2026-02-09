@@ -30,8 +30,10 @@ load_dotenv()
 
 # Project paths
 PROJECT_ROOT = Path(__file__).parent.parent
-SAMPLE_SKILLS_DIR = PROJECT_ROOT / "sample_skills"
-NEW_SKILLS_DIR = PROJECT_ROOT / "new_skills"
+SKILLS_ROOT = PROJECT_ROOT / "skills"
+PRODUCTION_SKILLS_DIR = SKILLS_ROOT / "production-skills"
+STAGED_SKILLS_DIR = SKILLS_ROOT / "staged-skills"
+DEV_SKILLS_DIR = SKILLS_ROOT / "dev-skills"
 CONFIG_DIR = PROJECT_ROOT / "config"
 
 # API Key Security
@@ -131,15 +133,17 @@ async def startup_event():
     logger.info("=" * 60)
     logger.info("Data Operations API Service v3.0 starting...")
     logger.info(f"Project root: {PROJECT_ROOT}")
-    logger.info(f"Sample skills directory: {SAMPLE_SKILLS_DIR}")
-    logger.info(f"New skills directory: {NEW_SKILLS_DIR}")
+    logger.info(f"Production skills directory: {PRODUCTION_SKILLS_DIR}")
+    logger.info(f"Staged skills directory: {STAGED_SKILLS_DIR}")
+    logger.info(f"Dev skills directory: {DEV_SKILLS_DIR}")
     logger.info("Synchronous mode - all operations wait for completion")
     logger.info("=" * 60)
 
-    # Ensure new_skills directory exists
-    if not NEW_SKILLS_DIR.exists():
-        NEW_SKILLS_DIR.mkdir(parents=True, exist_ok=True)
-        logger.info(f"Created new_skills directory at {NEW_SKILLS_DIR}")
+    # Ensure skills directories exist
+    for skills_dir in [PRODUCTION_SKILLS_DIR, STAGED_SKILLS_DIR, DEV_SKILLS_DIR]:
+        if not skills_dir.exists():
+            skills_dir.mkdir(parents=True, exist_ok=True)
+            logger.info(f"Created skills directory at {skills_dir}")
 
 
 # =============================================================================
@@ -156,7 +160,7 @@ async def health_check():
 async def setup_skills(_api_key: str = Depends(get_api_key)):
     """
     Run the full data setup process (synchronous).
-    Creates indexes and ingests all skills from sample_skills folder.
+    Creates indexes and ingests all skills from production-skills folder.
     Waits for completion and returns the full result.
     """
     logger.info("=" * 60)
@@ -194,7 +198,7 @@ async def setup_skills(_api_key: str = Depends(get_api_key)):
 
         # Enumerate skills
         skill_folders = [
-            d.name for d in SAMPLE_SKILLS_DIR.iterdir()
+            d.name for d in PRODUCTION_SKILLS_DIR.iterdir()
             if d.is_dir() and not d.name.startswith(".")
         ]
         total_skills = len(skill_folders)
@@ -202,7 +206,7 @@ async def setup_skills(_api_key: str = Depends(get_api_key)):
 
         # Bulk ingest all skills
         logger.info(f"Bulk ingesting {total_skills} skills...")
-        stats = ingest_skills(SAMPLE_SKILLS_DIR, es, "agent_skills", "agent_skill_files")
+        stats = ingest_skills(PRODUCTION_SKILLS_DIR, es, "agent_skills", "agent_skill_files")
 
         details.skills_created = skill_folders
         details.files_indexed = stats.get("files_indexed", 0) if isinstance(stats, dict) else 0
@@ -323,7 +327,7 @@ async def update_skills(
 
     Args:
         request: Optional request body with skills_path. If not provided or skills_path is None,
-                 defaults to the new_skills directory.
+                 defaults to the staged-skills directory.
     """
     # Determine the skills directory to use
     if request and request.skills_path:
@@ -331,7 +335,7 @@ async def update_skills(
         if not skills_dir.is_absolute():
             skills_dir = PROJECT_ROOT / request.skills_path
     else:
-        skills_dir = NEW_SKILLS_DIR
+        skills_dir = STAGED_SKILLS_DIR
 
     logger.info("=" * 60)
     logger.info(f"UPDATE-SKILLS - Starting ingestion from {skills_dir}")
@@ -446,10 +450,10 @@ async def update_skills(
 @app.post("/api/v1/ingest/folder", response_model=IngestResponse)
 async def ingest_folder(request: IngestRequest, _api_key: str = Depends(get_api_key)):
     """
-    Load data from a specific sample_skills subfolder.
+    Load data from a specific production-skills subfolder.
     """
     folder_name = request.folder_name
-    target_path = SAMPLE_SKILLS_DIR / folder_name
+    target_path = PRODUCTION_SKILLS_DIR / folder_name
 
     logger.info("=" * 60)
     logger.info(f"INGEST FOLDER - Starting ingestion for '{folder_name}'")
@@ -459,7 +463,7 @@ async def ingest_folder(request: IngestRequest, _api_key: str = Depends(get_api_
     if not target_path.exists():
         raise HTTPException(
             status_code=400,
-            detail=f"Directory '{folder_name}' not found in sample_skills.",
+            detail=f"Directory '{folder_name}' not found in production-skills.",
         )
 
     if not target_path.is_dir():

@@ -1,4 +1,0 @@
-key,value
-outlier_std_dev,3.0
-cardinality_threshold,0.95
-pattern_confidence,0.9

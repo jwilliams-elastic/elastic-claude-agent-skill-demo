@@ -1,6 +1,0 @@
-id,requirements,weight
-quality,"ISO_9001,quality_manual,inspection_records,nonconformance_tracking",0.25
-security,"SOC2,data_encryption,access_controls,incident_response",0.2
-financial,"financial_stability,insurance_coverage,payment_terms,audit_reports",0.15
-regulatory,"licenses,permits,environmental_compliance,labor_compliance",0.2
-operational,"capacity,delivery_performance,business_continuity,communication",0.2

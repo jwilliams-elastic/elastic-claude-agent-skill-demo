@@ -1,6 +1,0 @@
-key,value
-ctr_threshold,10000
-sar_consideration,5000
-structuring_window_hours,24
-structuring_count,3
-large_cash_threshold,3000

@@ -1,4 +1,0 @@
-id,high,high_factor,late_30_factor,late_30_threshold,late_60_factor,late_90_factor,medium,medium_factor,minimum_months,short_tenure_factor,stable_factor,stable_months
-dti,0.43,1.35,,,,,0.36,1.15,,,,
-employment,,,,,,,,,6,1.25,0.9,24
-payment_history,,,1.2,2,1.5,2.0,,,,,,

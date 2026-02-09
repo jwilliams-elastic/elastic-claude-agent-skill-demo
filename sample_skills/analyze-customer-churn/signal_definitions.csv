@@ -1,7 +1,0 @@
-id,base_risk,description,severity
-critical_login_decline,30,Logins dropped below 25% of healthy benchmark,high
-moderate_login_decline,15,Logins dropped below 50% of healthy benchmark,medium
-low_feature_adoption,10,Using less than 30% of expected features,medium
-high_negative_sentiment,20,More than 50% of support tickets are negative,high
-recent_escalation,25,Support ticket escalated in last 30 days,high
-payment_failures,20,Two or more failed payment attempts,high

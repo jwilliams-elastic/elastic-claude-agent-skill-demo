@@ -1,7 +1,0 @@
-id,risk,score
-net_15,low,10
-net_30,low,15
-net_45,medium,30
-net_60,medium,45
-net_90,high,70
-milestone,medium,35

@@ -1,6 +1,0 @@
-id,benchmark_effectiveness,key_metrics
-training,0.72,"completion_rate,knowledge_gain,skill_application"
-marketing,0.65,"reach,engagement,conversion"
-social,0.6,"beneficiary_impact,community_change,sustainability"
-operational,0.75,"process_improvement,cost_reduction,efficiency_gain"
-compliance,0.85,"adherence_rate,violation_reduction,audit_results"

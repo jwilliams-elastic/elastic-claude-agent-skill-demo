@@ -1,4 +1,0 @@
-id,adjustment_frequency,calculation_timing,description,true_up_frequency
-estimated,monthly,,Based on forecasted volume,
-actual,,period_end,Based on actual purchases,
-hybrid,,,Estimated with true-up,quarterly

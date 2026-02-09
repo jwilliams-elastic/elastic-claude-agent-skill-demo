@@ -1,6 +1,0 @@
-id,description,min
-excellent,ROI >= 300%,3.0
-good,ROI >= 150%,1.5
-acceptable,ROI >= 100%,1.0
-marginal,ROI >= 50%,0.5
-poor,ROI < 50%,0.0

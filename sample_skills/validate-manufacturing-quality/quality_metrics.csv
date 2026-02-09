@@ -1,5 +1,0 @@
-id,acceptable,excellent,good,poor,unit,world_class
-defect_rate,1000,100,500,5000,ppm,
-first_pass_yield,95,99,97,90,percent,
-cpk,1.33,2.0,1.67,1.0,index,
-oee,60,80,70,,percent,85

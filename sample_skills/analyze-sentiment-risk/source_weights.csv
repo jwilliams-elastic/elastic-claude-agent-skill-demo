@@ -1,4 +1,0 @@
-id,blogs,facebook,industry_publications,linkedin,major_outlets,reddit,reviews,support_tickets,twitter
-social_media,,"{'weight': 0.07, 'velocity_multiplier': 1.2}",,"{'weight': 0.1, 'velocity_multiplier': 1.0}",,"{'weight': 0.08, 'velocity_multiplier': 1.5}",,,"{'weight': 0.15, 'velocity_multiplier': 2.0}"
-news,"{'weight': 0.05, 'velocity_multiplier': 0.8}",,"{'weight': 0.15, 'velocity_multiplier': 1.0}",,"{'weight': 0.25, 'velocity_multiplier': 1.5}",,,,
-customer_feedback,,,,,,,"{'weight': 0.1, 'velocity_multiplier': 1.0}","{'weight': 0.05, 'velocity_multiplier': 1.2}",

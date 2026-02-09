@@ -1,6 +1,0 @@
-id,max_override_pct
-system,0
-agent,0.1
-supervisor,0.25
-manager,0.5
-director,1.0

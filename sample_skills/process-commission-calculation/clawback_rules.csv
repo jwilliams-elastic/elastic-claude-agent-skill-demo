@@ -1,4 +1,0 @@
-key,value
-cancellation_window_days,90
-churn_clawback_pct,1.0
-partial_refund_threshold,0.25

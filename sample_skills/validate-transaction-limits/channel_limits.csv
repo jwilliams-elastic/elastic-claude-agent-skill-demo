@@ -1,6 +1,0 @@
-id,additional_verification_threshold,multiplier
-online,0.8,1.0
-mobile,0.7,0.8
-atm,0.6,0.3
-branch,0.9,1.5
-wire,0.5,2.0

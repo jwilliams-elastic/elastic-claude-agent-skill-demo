@@ -1,7 +1,0 @@
-id,enforcement_score,importance
-us,0.9,1.0
-eu,0.85,0.85
-china,0.6,0.8
-japan,0.85,0.75
-korea,0.8,0.65
-other,0.5,0.3

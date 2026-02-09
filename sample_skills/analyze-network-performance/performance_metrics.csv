@@ -1,6 +1,0 @@
-id,acceptable,critical,excellent,good,optimal_max,poor,warning
-latency_ms,100,,20,50,,200,
-packet_loss_pct,1.0,,0.01,0.1,,5.0,
-jitter_ms,30,,5,15,,50,
-bandwidth_utilization_pct,,90,,,70,,80
-availability_pct,99.5,,99.99,99.9,,99.0,

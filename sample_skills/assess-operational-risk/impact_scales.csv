@@ -1,3 +1,0 @@
-id,1,2,3,4,5
-financial,"{'label': 'Negligible', 'range': [0, 100000]}","{'label': 'Minor', 'range': [100000, 500000]}","{'label': 'Moderate', 'range': [500000, 2000000]}","{'label': 'Major', 'range': [2000000, 10000000]}","{'label': 'Severe', 'range': [10000000, None]}"
-reputational,"{'label': 'Negligible', 'description': 'No external awareness'}","{'label': 'Minor', 'description': 'Limited local media'}","{'label': 'Moderate', 'description': 'Regional media coverage'}","{'label': 'Major', 'description': 'National media coverage'}","{'label': 'Severe', 'description': 'International media, regulatory action'}"

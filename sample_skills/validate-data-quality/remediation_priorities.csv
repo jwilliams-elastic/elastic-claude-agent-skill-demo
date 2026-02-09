@@ -1,5 +1,0 @@
-id,action,sla_hours
-critical,immediate_fix,4
-high,urgent_fix,24
-medium,scheduled_fix,72
-low,batch_fix,168

@@ -1,7 +1,0 @@
-id,action,notice_days
-rent_commencement,begin_rent_payment,0
-renewal_option,exercise_renewal,180
-termination_option,provide_termination_notice,365
-rent_escalation,review_new_rent,30
-cam_reconciliation,audit_cam_charges,90
-insurance_renewal,provide_insurance_certificate,30

@@ -1,6 +1,0 @@
-key,value
-version,2026.1
-last_updated,2026-01-15
-sensitivity_ranges_price_change_pct,"-20,-10,0,10,20"
-sensitivity_ranges_variable_cost_change_pct,"-20,-10,0,10,20"
-sensitivity_ranges_fixed_cost_change_pct,"-20,-10,0,10,20"

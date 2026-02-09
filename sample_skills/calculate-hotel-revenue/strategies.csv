@@ -1,6 +1,0 @@
-id,close_discounts,description,offer_advance_purchase,open_discounts,rate_adjustment
-MAXIMIZE_RATE,True,High demand period - optimize for rate,,,1.15
-YIELD_MANAGEMENT,False,Standard yield optimization,,,1.0
-DISTRESSED_INVENTORY,,Low occupancy - stimulate demand,,True,0.8
-EARLY_BOOKING_INCENTIVE,,Encourage advance bookings,True,,0.9
-STANDARD_PRICING,False,Normal market conditions,,,1.0

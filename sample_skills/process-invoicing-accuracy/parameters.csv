@@ -1,7 +1,0 @@
-key,value
-version,2026.1
-last_updated,2026-01-15
-contract_compliance_pricing_source_priority,"special_pricing,contract_rate,list_price"
-contract_compliance_volume_discount_tiers,True
-contract_compliance_minimum_commitment_check,True
-contract_compliance_maximum_liability_check,True

@@ -1,6 +1,0 @@
-id,profit_cap,risk_adjustment
-FFP,0.15,1.0
-FPIF,0.12,1.05
-CPFF,0.08,1.1
-CPIF,0.1,1.08
-T_AND_M,0.1,1.15

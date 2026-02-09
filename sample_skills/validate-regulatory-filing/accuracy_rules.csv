@@ -1,4 +1,0 @@
-key,value
-material_change_threshold,0.1
-rounding_tolerance,1000
-required_reconciliations,"balance_sheet,cash_flow"

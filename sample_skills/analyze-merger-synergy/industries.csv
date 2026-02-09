@@ -1,5 +1,0 @@
-id,cost_benchmarks,revenue_benchmarks
-manufacturing,"{'employee_reduction_factor': 0.15, 'avg_cost_per_employee': 95000, 'procurement_leverage': 0.06, 'it_consolidation_pct': 0.25}","{'cross_sell_conversion': 0.08, 'avg_deal_size_pct': 0.015, 'expansion_factor': 0.04}"
-technology,"{'employee_reduction_factor': 0.12, 'avg_cost_per_employee': 150000, 'procurement_leverage': 0.04, 'it_consolidation_pct': 0.3}","{'cross_sell_conversion': 0.12, 'avg_deal_size_pct': 0.02, 'expansion_factor': 0.06}"
-financial_services,"{'employee_reduction_factor': 0.18, 'avg_cost_per_employee': 120000, 'procurement_leverage': 0.03, 'it_consolidation_pct': 0.2}","{'cross_sell_conversion': 0.15, 'avg_deal_size_pct': 0.01, 'expansion_factor': 0.03}"
-healthcare,"{'employee_reduction_factor': 0.1, 'avg_cost_per_employee': 85000, 'procurement_leverage': 0.08, 'it_consolidation_pct': 0.15}","{'cross_sell_conversion': 0.06, 'avg_deal_size_pct': 0.01, 'expansion_factor': 0.05}"

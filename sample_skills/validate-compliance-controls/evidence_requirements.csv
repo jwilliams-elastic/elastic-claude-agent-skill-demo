@@ -1,4 +1,0 @@
-key,value
-retention_period_years,7
-documentation_types,"screenshots,system_logs,signed_approvals,reconciliation_files"
-sampling_methodology,statistical_or_judgmental

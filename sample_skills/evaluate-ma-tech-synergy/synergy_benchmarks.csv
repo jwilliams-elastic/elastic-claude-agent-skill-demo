@@ -1,6 +1,0 @@
-category,year1_pct,year2_pct,year3_pct,run_rate_pct,description
-platform_consolidation,0.15,0.45,0.55,0.55,ERP/CRM/HCM platform rationalization
-infrastructure,0.30,0.80,1.00,1.00,Data center and cloud consolidation
-applications,0.20,0.50,0.80,0.80,Redundant application retirement
-vendor_contracts,0.50,0.80,0.90,0.90,License and contract consolidation
-labor,0.10,0.40,0.70,0.70,IT workforce optimization

@@ -1,6 +1,0 @@
-dimension,weight,description,key_indicators
-data_engineering,0.25,Data infrastructure and pipeline capabilities,Volume handling;Source integration;Real-time;Cloud platform
-data_governance,0.25,Data management and quality practices,Catalog;Lineage;Quality;Stewardship
-analytics,0.20,Business intelligence and analytics,Self-service;Semantic layer;Embedded;Decision support
-mlops,0.15,Machine learning operations maturity,Models in prod;Feature store;Automation;Monitoring
-data_culture,0.15,Organizational data capabilities,Literacy;Democratization;Data mesh;Data-driven decisions

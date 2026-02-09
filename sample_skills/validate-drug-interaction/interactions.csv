@@ -1,9 +1,0 @@
-id,description,management,mechanism,severity
-warfarin_aspirin,Increased bleeding risk,Monitor INR closely; consider GI protection,Additive antiplatelet and anticoagulant effects,3
-warfarin_omeprazole,May increase warfarin effect,Monitor INR when starting or stopping,CYP2C19 inhibition,2
-lisinopril_potassium,Risk of hyperkalemia,Monitor potassium levels regularly,ACE inhibitors reduce potassium excretion,3
-metformin_contrast,Risk of lactic acidosis,Hold metformin 48h before/after contrast,Contrast may impair renal function,4
-simvastatin_amiodarone,Increased myopathy/rhabdomyolysis risk,Limit simvastatin to 20mg daily,CYP3A4 inhibition increases statin levels,4
-ssri_maoi,Serotonin syndrome risk,Contraindicated - do not combine,Excessive serotonergic activity,5
-methotrexate_nsaid,Increased methotrexate toxicity,Avoid combination or monitor closely,NSAIDs reduce methotrexate clearance,4
-digoxin_amiodarone,Increased digoxin levels,Reduce digoxin dose by 50%,P-glycoprotein inhibition,3

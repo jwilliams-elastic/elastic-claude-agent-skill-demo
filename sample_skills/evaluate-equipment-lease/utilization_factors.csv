@@ -1,4 +1,0 @@
-id,hours_per_year,residual_adjustment,wear_multiplier
-light,1000,1.1,0.8
-medium,2000,1.0,1.0
-heavy,3000,0.85,1.3

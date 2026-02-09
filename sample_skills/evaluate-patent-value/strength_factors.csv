@@ -1,5 +1,0 @@
-id,components,weight
-legal_strength,"{'claim_breadth': {'weight': 0.3}, 'prosecution_history': {'weight': 0.2}, 'validity_challenges': {'weight': 0.25}, 'enforceability_history': {'weight': 0.25}}",0.25
-technical_strength,"{'innovation_level': {'weight': 0.3}, 'technical_scope': {'weight': 0.25}, 'design_around_difficulty': {'weight': 0.25}, 'citation_metrics': {'weight': 0.2}}",0.25
-market_strength,"{'market_size': {'weight': 0.3}, 'market_growth': {'weight': 0.2}, 'competitive_advantage': {'weight': 0.3}, 'licensing_potential': {'weight': 0.2}}",0.3
-strategic_value,"{'portfolio_fit': {'weight': 0.25}, 'defensive_value': {'weight': 0.25}, 'blocking_potential': {'weight': 0.25}, 'cross_licensing_value': {'weight': 0.25}}",0.2

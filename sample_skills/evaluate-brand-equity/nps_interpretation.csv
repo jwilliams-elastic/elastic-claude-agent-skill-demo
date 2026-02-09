@@ -1,4 +1,0 @@
-id,max_score,min_score,weight
-promoters,,9,1.0
-passives,8,7,0.0
-detractors,6,,-1.0

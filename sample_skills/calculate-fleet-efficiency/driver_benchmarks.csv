@@ -1,6 +1,0 @@
-key,value
-optimal_speed_min,55
-optimal_speed_max,65
-max_idle_pct,0.1
-max_hard_brakes_per_100mi,5
-max_speeding_events_per_100mi,2

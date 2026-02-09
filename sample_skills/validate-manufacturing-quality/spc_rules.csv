@@ -1,6 +1,0 @@
-id,description,severity
-rule_1,One point beyond 3 sigma,high
-rule_2,9 points in a row on same side of center,medium
-rule_3,6 points in a row trending up or down,medium
-rule_4,14 points alternating up and down,low
-rule_5,2 of 3 points beyond 2 sigma,medium

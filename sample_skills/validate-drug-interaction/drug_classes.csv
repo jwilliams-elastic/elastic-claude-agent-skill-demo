@@ -1,8 +1,0 @@
-id,class,cross_reactivity,renal_dosing
-warfarin,anticoagulant,,
-aspirin,antiplatelet,nsaid,
-omeprazole,proton_pump_inhibitor,,
-lisinopril,ace_inhibitor,,"{'moderate': 'Start 2.5-5mg daily', 'severe': 'Start 2.5mg daily'}"
-metformin,biguanide,,"{'moderate': 'Max 1000mg daily', 'severe': 'Contraindicated'}"
-amoxicillin,penicillin,"penicillin,ampicillin","{'moderate': '250-500mg q12h', 'severe': '250-500mg q24h'}"
-gabapentin,anticonvulsant,,"{'moderate': '200-700mg daily', 'severe': '100-300mg daily'}"

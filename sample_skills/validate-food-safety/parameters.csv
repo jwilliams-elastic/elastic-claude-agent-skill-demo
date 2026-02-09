@@ -1,5 +1,0 @@
-key,value
-version,2026.1
-last_updated,2026-01-15
-allergen_rules_major_allergens,"milk,eggs,fish,shellfish,tree_nuts,peanuts,wheat,soybeans,sesame"
-allergen_rules_ingredient_allergen_mapping,"{'milk': ['milk', 'cream', 'butter', 'cheese', 'whey', 'casein', 'lactose'], 'eggs': ['egg', 'albumin', 'lysozyme', 'mayonnaise'], 'wheat': ['wheat', 'flour', 'bread', 'gluten', 'semolina'], 'soy': ['soy', 'soya', 'tofu', 'edamame', 'miso'], 'peanuts': ['peanut', 'groundnut', 'arachis'], 'tree_nuts': ['almond', 'cashew', 'walnut', 'pecan', 'pistachio', 'hazelnut', 'macadamia'], 'fish': ['fish', 'anchovy', 'cod', 'salmon', 'tuna'], 'shellfish': ['shrimp', 'crab', 'lobster', 'oyster', 'clam', 'mussel'], 'sesame': ['sesame', 'tahini']}"

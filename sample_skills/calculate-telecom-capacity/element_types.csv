@@ -1,6 +1,0 @@
-id,description,min_growth_rate,peak_multiplier,typical_lifespan_years
-core_router,Core network routers,0.15,1.4,7
-edge_router,Edge/aggregation routers,0.2,1.5,5
-cell_tower,Mobile cell sites,0.25,1.8,10
-fiber_link,Fiber optic links,0.1,1.3,20
-default,Default parameters,0.15,1.5,7

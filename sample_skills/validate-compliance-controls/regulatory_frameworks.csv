@@ -1,4 +1,0 @@
-id,applicable_entities,control_focus,key_requirements
-sox,public_companies,financial_reporting,"management_assessment,auditor_attestation"
-coso,all,enterprise_wide,"control_environment,risk_assessment,control_activities,information_communication,monitoring"
-cobit,it_dependent,information_technology,"governance,management,processes"

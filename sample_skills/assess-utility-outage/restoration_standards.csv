@@ -1,5 +1,0 @@
-id,max_hours,target_hours
-critical,8,4
-high,16,8
-medium,24,12
-normal,48,24

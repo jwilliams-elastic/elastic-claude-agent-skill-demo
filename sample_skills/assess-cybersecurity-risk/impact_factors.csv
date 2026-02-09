@@ -1,3 +1,0 @@
-id,CCPA,GDPR,HIPAA,PCI,SOX,high,low,medium
-data_sensitivity,,,,,,80,20,50
-regulatory_penalties,15,35,30,25,20,,,

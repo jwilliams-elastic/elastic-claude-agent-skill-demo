@@ -1,8 +1,0 @@
-key,value
-version,2026.1
-last_updated,2026-01-15
-alert_actions_critical,"executive_notification,crisis_team_activation,pr_response_prep"
-alert_actions_high,"management_alert,monitoring_increase,response_draft"
-alert_actions_elevated,"team_notification,trend_tracking"
-alert_actions_moderate,"log_entry,weekly_review"
-alert_actions_low,standard_monitoring

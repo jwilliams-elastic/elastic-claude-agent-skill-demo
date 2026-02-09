@@ -1,6 +1,0 @@
-id,metrics,weight
-outcome_achievement,"goal_attainment,target_completion,milestone_achievement",0.3
-efficiency,"cost_per_outcome,resource_utilization,time_to_completion",0.2
-quality,"deliverable_quality,stakeholder_satisfaction,error_rate",0.2
-impact,"beneficiary_reach,behavior_change,sustainability",0.2
-governance,"compliance,reporting_accuracy,risk_management",0.1

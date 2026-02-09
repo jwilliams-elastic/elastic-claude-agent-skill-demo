@@ -1,5 +1,0 @@
-id,landlord_pays,tenant_pays
-gross,"taxes,insurance,maintenance",base_rent
-modified_gross,"taxes,insurance","base_rent,utilities"
-triple_net,,"base_rent,taxes,insurance,maintenance"
-absolute_net,,"base_rent,taxes,insurance,maintenance,structural"

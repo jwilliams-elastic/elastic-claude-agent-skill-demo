@@ -1,6 +1,0 @@
-id,days_before_normal,flag_threshold,new_vendor_high_amount,percentage_below,recent_change_days,threshold
-round_amounts,,3,,,,0.1
-just_under_approval,,2,,0.05,,
-unusual_vendor,,,10000,,,
-rush_payment,10,,,,,
-changed_bank_details,,,,,30,

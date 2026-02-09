@@ -1,5 +1,0 @@
-id,action,increase_threshold
-low,standard_renewal,0.05
-moderate,review_pricing,0.1
-high,retention_offer,0.15
-critical,executive_review,0.2

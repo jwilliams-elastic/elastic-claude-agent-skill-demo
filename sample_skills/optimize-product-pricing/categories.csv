@@ -1,9 +1,0 @@
-id,description,optimal_promo_discount,price_elasticity,promo_volume_lift,seasonality_factor
-personal_care,"Skincare, haircare, personal hygiene",0.2,1.4,0.35,1.0
-household_cleaning,"Cleaning products, detergents",0.25,1.8,0.45,0.95
-food_beverage,Packaged food and beverages,0.15,2.0,0.4,1.1
-baby_products,"Diapers, formula, baby care",0.15,0.8,0.25,1.0
-pet_supplies,Pet food and accessories,0.2,1.2,0.3,1.05
-health_wellness,"OTC medications, vitamins, supplements",0.15,0.9,0.2,1.15
-home_decor,"Decorative items, textiles",0.3,1.6,0.5,1.2
-default,Default category parameters,0.2,1.5,0.35,1.0

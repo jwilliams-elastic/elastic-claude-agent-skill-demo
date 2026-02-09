@@ -1,4 +1,0 @@
-id,description,weight
-direct_labor,Time spent on primary tasks,0.6
-indirect_labor,Support and overhead activities,0.25
-non_productive,"Breaks, meetings, downtime",0.15

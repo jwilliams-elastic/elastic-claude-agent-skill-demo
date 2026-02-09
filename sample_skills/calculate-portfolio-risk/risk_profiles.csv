@@ -1,4 +1,0 @@
-id,max_equity_weight,max_risk_score,max_sector_weight,max_single_position,target_volatility
-conservative,0.4,30,0.25,0.1,0.08
-moderate,0.7,55,0.35,0.15,0.15
-aggressive,1.0,80,0.5,0.25,0.25

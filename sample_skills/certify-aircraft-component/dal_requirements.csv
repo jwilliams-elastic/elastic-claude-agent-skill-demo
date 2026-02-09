@@ -1,6 +1,0 @@
-id,cycle_warning_threshold,description,inspection_interval_days,min_material_certs,required_documentation,testing_coverage
-A,5000,Catastrophic - Failure may cause crash,90,5,"design_analysis,safety_assessment,test_reports,conformity_inspection",100
-B,3000,Hazardous - Large negative impact on safety,180,4,"design_analysis,test_reports,conformity_inspection",95
-C,2000,Major - Significant reduction in safety margins,365,3,"design_analysis,conformity_inspection",80
-D,1000,Minor - Slight reduction in safety margins,730,2,conformity_inspection,50
-E,500,No Effect - No impact on safety,1095,1,,0

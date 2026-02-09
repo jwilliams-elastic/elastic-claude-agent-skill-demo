@@ -1,7 +1,0 @@
-id,capacity_multiplier,next_technology
-10G,10.0,100G
-100G,4.0,400G
-400G,2.0,800G
-4G_LTE,10.0,5G
-5G,2.0,5G_Advanced
-default,4.0,next_gen

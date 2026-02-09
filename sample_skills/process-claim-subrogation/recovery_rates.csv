@@ -1,6 +1,0 @@
-id,expected_recovery,min
-excellent_potential,0.85,80
-good_potential,0.65,60
-moderate_potential,0.45,40
-low_potential,0.25,20
-poor_potential,0.1,0

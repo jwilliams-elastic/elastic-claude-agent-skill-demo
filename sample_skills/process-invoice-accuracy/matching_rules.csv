@@ -1,4 +1,0 @@
-id,description,required_for,tolerance_type
-two_way_match,Invoice to PO match,"service_invoices,blanket_orders",price_only
-three_way_match,Invoice to PO to Receipt match,goods_invoices,price_and_quantity
-four_way_match,Invoice to PO to Receipt to Inspection,quality_critical_items,strict

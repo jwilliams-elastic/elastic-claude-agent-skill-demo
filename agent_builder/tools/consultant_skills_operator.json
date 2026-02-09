@@ -1,7 +1,7 @@
 {
   "id": "consultant_skills_operator",
   "type": "workflow",
-  "description": "Executes workflows for \"setup\", \"teardown\" and \"update-skills.\"",
+  "description": "Executes workflows for \"setup-skills\", \"teardown-skills\" and \"update-skills.\"",
   "tags": ["consultant agent skills"],
   "configuration":
   {

@@ -1,5 +1,0 @@
-id,max_ltv,pmi_threshold
-single_family,0.97,0.8
-condo,0.9,0.8
-multi_family,0.85,0.75
-investment,0.75,0.7

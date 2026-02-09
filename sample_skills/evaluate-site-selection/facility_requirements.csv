@@ -1,5 +1,0 @@
-id,dock_doors,min_acres,min_sqft,parking_ratio,power_mw,redundancy,water_gpd
-manufacturing,,10,,,5,,100000
-distribution,50,20,,,1,,
-office,,,50000,4,,,
-data_center,,5,,,20,n+1,

@@ -1,6 +1,0 @@
-id,acceptable,score
-contract_value_1x,True,20
-contract_value_2x,True,10
-annual_fees_12_months,True,25
-fees_paid_6_months,True,30
-unlimited,False,100

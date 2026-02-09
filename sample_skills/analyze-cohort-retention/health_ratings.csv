@@ -1,6 +1,0 @@
-id,action,color,min_vs_benchmark
-excellent,scale,green,1.2
-good,maintain,light_green,1.0
-average,monitor,yellow,0.8
-below_average,investigate,orange,0.6
-critical,urgent_intervention,red,0.0

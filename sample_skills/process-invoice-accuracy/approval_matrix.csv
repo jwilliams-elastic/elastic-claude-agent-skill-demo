@@ -1,6 +1,0 @@
-id,approver,max_amount
-tier_1,auto_approve,1000
-tier_2,supervisor,5000
-tier_3,manager,25000
-tier_4,director,100000
-tier_5,vp_finance,

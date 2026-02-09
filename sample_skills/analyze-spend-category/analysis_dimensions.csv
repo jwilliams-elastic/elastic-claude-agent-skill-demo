@@ -1,4 +1,0 @@
-id,dual_source,fragmented,high,low,minimal,moderate,multi_source,single_source
-spend_concentration,,"{'threshold': 0.4, 'description': 'Top 20% suppliers < 60% spend'}","{'threshold': 0.8, 'description': 'Top 20% suppliers = 80%+ spend'}",,,"{'threshold': 0.6, 'description': 'Top 20% suppliers = 60-80% spend'}",,
-supplier_diversity,"{'supplier_count': 2, 'risk': 'high'}",,,,,,"{'supplier_count_min': 3, 'risk': 'moderate'}","{'supplier_count': 1, 'risk': 'critical'}"
-contract_coverage,,,"{'min_pct': 0.8, 'rating': 'excellent'}","{'min_pct': 0.2, 'rating': 'needs_improvement'}","{'min_pct': 0.0, 'rating': 'critical'}","{'min_pct': 0.5, 'rating': 'good'}",,

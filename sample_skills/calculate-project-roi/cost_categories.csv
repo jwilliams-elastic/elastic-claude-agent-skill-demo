@@ -1,6 +1,0 @@
-id,depreciation_years,growth_rate,type
-capital,5,,one_time
-implementation,,,one_time
-training,,,one_time
-maintenance,,0.03,recurring
-operations,,0.02,recurring

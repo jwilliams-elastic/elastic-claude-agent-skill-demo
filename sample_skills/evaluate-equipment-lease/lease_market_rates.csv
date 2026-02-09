@@ -1,5 +1,0 @@
-id,buyout_pct,monthly_pct_of_value,typical_term_months
-excavator,0.15,0.015,60
-loader,0.12,0.016,48
-crane,0.18,0.014,72
-general,0.15,0.015,60

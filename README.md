@@ -1,6 +1,6 @@
 # Elastic Agent Skills Repository (Demo)
 
-A demonstration of using Elasticsearch as a backend for Claude agent skills via the Model Context Protocol (MCP). This repository contains Python scripts, JSON configurations, and sample domain-specific skills showcasing proprietary business logic retrieval.
+A demonstration of using Elasticsearch as a backend for Claude agent skills via the Model Context Protocol (MCP). This repository contains Python scripts, JSON configurations, and sample domain-specific skills showcasing proprietary business logic retrieval. This project is optimized for use with Elasticsearch serverless but can run on ECH or self-managed with an "enterprise" entitlement. 
 
 ![Elastic Agent Skill Hot Load](./elastic_agent_skill_hot_load.jpg)
 
@@ -22,12 +22,24 @@ KIBANA_URL=https://your-kibana-instance.elastic.cloud
 ELASTIC_API_KEY=your_api_key_here
 ```
 
-### 3. Create the Workflow in Kibana
+### 3. Setup (Create Tools & Agents)
+
+```bash
+./init.sh
+```
+
+This registers MCP tools and agents with Kibana. Follow the **Next Steps** output to:
+1. Start the API server (elastic workflow calls this API to setup/teardown/update skills)
+2. Setup Cloudflare tunnel (this allows elastic workflows to access your API server)
+3. Update the elastic workflow with the correct Cloudflare tunnel URL 
+
+### 4. Create the Workflow in Kibana
 
 1. Go to **Kibana → Management → Workflows**
 2. Create a new workflow using the contents of `agent_builder/workflows/agent_skills_operator.yaml`
 3. Copy the workflow ID from the URL (e.g., `workflow-910a3d13-44e8-491d-bc3f-52ac1946f9a7`)
 4. Update `agent_builder/tools/consultant_skills_operator.json` with your workflow ID:
+
    ```json
    {
      "configuration": {
@@ -37,21 +49,20 @@ ELASTIC_API_KEY=your_api_key_here
    }
    ```
 
-### 4. Setup (Create Tools & Agents)
+### 5. Agent Builder
 
-```bash
-./init.sh
-```
+1. Go to **Kibana → Agents 
+2. Run demo using "Consultant Skills Agent"  
+3. See the [DEMO_SCRIPT.md](./DEMO_SCRIPT.md) for a step-by-step example dialogue and workflow.
 
-This registers MCP tools and agents with Kibana. Follow the "Next Steps" output to start the API server and Cloudflare tunnel.
-
-### 5. Start Claude with Environment Loaded
+### 6. Start Claude with Environment Loaded (Optional)
+You only need to run this step when using Claude to demo.
 
 ```bash
 export $(cat .env | xargs) && claude
 ```
 
-### 6. Teardown (Clean Slate)
+### 7. Teardown (Clean Slate)
 
 To delete all tools and agents for a fresh rebuild:
 

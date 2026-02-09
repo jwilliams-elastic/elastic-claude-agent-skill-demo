@@ -1,2 +1,0 @@
-id,bakery,candy,dairy,snack
-facility_types,"{'common_cross_contact': ['wheat', 'milk', 'eggs', 'soy'], 'risk_level': 'medium'}","{'common_cross_contact': ['milk', 'peanuts', 'tree_nuts', 'soy'], 'risk_level': 'high'}","{'common_cross_contact': ['milk'], 'risk_level': 'low'}","{'common_cross_contact': ['wheat', 'soy', 'milk'], 'risk_level': 'medium'}"

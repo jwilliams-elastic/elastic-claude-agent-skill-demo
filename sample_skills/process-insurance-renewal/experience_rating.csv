@@ -1,7 +1,0 @@
-id,adjustment,description,loss_ratio_max,loss_ratio_min
-no_claims,-0.1,No claims discount,,
-favorable,-0.05,,0.4,
-average,0.0,,0.6,
-unfavorable,0.1,,0.8,
-poor,0.2,,1.0,
-severe,0.3,,,1.0

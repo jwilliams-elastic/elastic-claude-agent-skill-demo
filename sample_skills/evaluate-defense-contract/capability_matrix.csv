@@ -1,6 +1,0 @@
-id,certifications,min_experience_years,required_capability
-software,CMMI_L3,3,software
-systems_engineering,ISO15288,5,systems_engineering
-hardware,AS9100,5,hardware_development
-cybersecurity,CMMC_L2,3,cybersecurity
-logistics,,2,logistics

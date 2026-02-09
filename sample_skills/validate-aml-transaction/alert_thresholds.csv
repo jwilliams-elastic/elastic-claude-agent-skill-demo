@@ -1,5 +1,0 @@
-id,action,max_score,min_score
-low,log,30,0
-medium,review,60,30
-high,escalate,80,60
-critical,block_and_report,100,80

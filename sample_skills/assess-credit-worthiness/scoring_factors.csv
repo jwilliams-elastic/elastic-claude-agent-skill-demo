@@ -1,6 +1,0 @@
-id,max_points,weight
-payment_history,350,0.35
-credit_utilization,300,0.3
-credit_history_length,150,0.15
-credit_mix,100,0.1
-new_credit,100,0.1

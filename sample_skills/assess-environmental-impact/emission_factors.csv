@@ -1,4 +1,0 @@
-id,air_freight,coal,diesel,gasoline,grid_average,lpg,natural_gas,rail_freight,renewable,road_freight,sea_freight,unit
-electricity,,0.95,,,0.42,,0.45,,0.02,,,kg_co2_per_kwh
-transportation,0.602,,,,,,,0.022,,0.062,0.016,kg_co2_per_tonne_km
-fuel_combustion,,,2.68,2.31,,1.51,1.89,,,,,kg_co2_per_liter

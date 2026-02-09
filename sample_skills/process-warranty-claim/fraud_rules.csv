@@ -1,5 +1,0 @@
-key,value
-max_claims_per_year,3
-review_threshold_value,500
-pattern_lookback_months,24
-high_risk_indicators,"multiple_same_defect,excessive_claims,suspicious_timing"

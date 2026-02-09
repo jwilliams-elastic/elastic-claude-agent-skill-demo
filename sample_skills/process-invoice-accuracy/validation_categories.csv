@@ -1,6 +1,0 @@
-id,checks,weight
-header_validation,"vendor_id,invoice_date,due_date,payment_terms,currency",0.15
-line_item_validation,"item_description,quantity,unit_price,extended_amount,tax",0.3
-pricing_validation,"contract_price,price_variance,discount_applied,surcharges",0.25
-quantity_validation,"receipt_match,order_match,tolerance_check",0.2
-calculation_validation,"line_extensions,subtotal,tax_calculation,total",0.1

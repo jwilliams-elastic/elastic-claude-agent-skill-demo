@@ -1,4 +1,0 @@
-id,adverse_media,cash_transaction,cryptocurrency,fatf_blacklist,fatf_greylist,high_risk_countries,high_risk_industry,high_risk_jurisdiction,high_value,international_wire,new_customer,pep_status,round_amount,tax_haven,unusual_pattern
-customer_risk,15,,,,,30,20,,,,10,25,,,
-transaction_risk,,15,25,,,,,,15,20,,,5,,20
-geographic_risk,,,,40,25,,,20,,,,,,15,

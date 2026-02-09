@@ -1,6 +1,0 @@
-level,label,data_engineering,data_governance,analytics,mlops,data_culture
-1,Initial,Ad-hoc ETL scripts,No formal governance,Spreadsheet-based,No ML in production,Data as IT responsibility
-2,Developing,Basic pipelines defined,Emerging standards,Departmental BI,ML experimentation,Some data literacy
-3,Defined,Documented DataOps,Active governance program,Self-service BI,ML platform established,Data literacy training
-4,Managed,Automated pipelines,Measured quality metrics,Embedded analytics,Automated ML pipelines,Data-driven KPIs
-5,Optimizing,Real-time streaming,AI-driven governance,Decision intelligence,Full MLOps automation,Data mesh culture

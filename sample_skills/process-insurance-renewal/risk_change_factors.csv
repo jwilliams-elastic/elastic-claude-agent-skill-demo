@@ -1,4 +1,0 @@
-id,employee_decrease,employee_increase,location_addition,loss_control_measures,revenue_decrease,revenue_increase,safety_program,security_upgrade
-exposure_increase,,"{'threshold': 0.15, 'rate_factor': 0.04}",{'rate_factor': 0.08},,,"{'threshold': 0.1, 'rate_factor': 0.05}",,
-exposure_decrease,"{'threshold': 0.15, 'rate_factor': -0.02}",,,,"{'threshold': 0.1, 'rate_factor': -0.03}",,,
-risk_improvements,,,,{'credit': -0.04},,,{'credit': -0.03},{'credit': -0.02}

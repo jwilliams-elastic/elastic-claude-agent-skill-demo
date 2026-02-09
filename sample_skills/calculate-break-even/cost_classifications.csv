@@ -1,4 +1,0 @@
-id,categories,description
-fixed_costs,"rent,salaries,insurance,depreciation,utilities_base,marketing_fixed",Costs that do not vary with production volume
-variable_costs,"raw_materials,direct_labor,packaging,shipping,commissions,utilities_variable",Costs that vary directly with production volume
-semi_variable,"maintenance,supervision,quality_control",Costs with both fixed and variable components

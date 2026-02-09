@@ -1,4 +1,0 @@
-id,severity,threshold_pct,window_hours
-spike,high,0.5,24
-surge,medium,0.25,48
-trend,low,0.15,168

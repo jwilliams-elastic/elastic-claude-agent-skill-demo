@@ -1,4 +1,0 @@
-id,decay_model,parameters
-standard,exponential,"{'initial': 1.0, 'decay_rate': 0.05}"
-steep_early,power_law,"{'initial': 1.0, 'exponent': -0.5}"
-plateau,logarithmic,"{'initial': 1.0, 'rate': 0.15}"

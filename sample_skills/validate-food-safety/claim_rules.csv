@@ -1,6 +1,0 @@
-id,max_gluten_ppm,prohibited_ingredients,requires_certification
-natural,,"artificial color,artificial flavor,synthetic",
-organic,,"synthetic,gmo",USDA_Organic
-non-gmo,,,Non_GMO_Project
-gluten-free,20,"wheat,barley,rye,gluten",
-no artificial colors,,"fd&c,artificial color",

@@ -1,7 +1,0 @@
-id,elements,weight
-cost_factors,"real_estate_cost,labor_cost,utility_cost,tax_burden",0.25
-labor_market,"workforce_availability,skill_match,education_level,wage_rates",0.2
-infrastructure,"transportation,utilities,telecommunications,proximity_to_suppliers",0.2
-market_access,"customer_proximity,distribution_network,market_size,growth_potential",0.15
-quality_of_life,"cost_of_living,healthcare,education,amenities",0.1
-regulatory_environment,"business_climate,permits_timeline,environmental_regulations,incentives",0.1

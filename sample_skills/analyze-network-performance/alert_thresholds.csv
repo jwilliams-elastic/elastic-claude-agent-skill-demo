@@ -1,5 +1,0 @@
-key,value
-latency_warning_pct,80
-latency_critical_pct,100
-utilization_warning_pct,75
-utilization_critical_pct,90

@@ -1,5 +1,0 @@
-id,aql,sampling_level
-receiving,1.0,S2
-in_process,0.65,S3
-final,0.4,S4
-audit,1.5,S2

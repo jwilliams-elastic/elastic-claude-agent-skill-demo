@@ -6,6 +6,14 @@ This demo script showcases how a Claude agent can discover, retrieve, and execut
 
 ## Happy Path - Showcases full power of Agent Builder and Workflows
 
+I’m here in the Elastic Agent Builder.
+
+I'm going to act as an employee trying to submit an $850 team dinner.
+
+Watch closely: The agent won't just read the policy document. It will search Elasticsearch, hot-load the specific 'Verify Expense' skill, and execute the code to audit my math live.
+
+Let’s run it.
+
 #### Easy Prompts
 - How many skills do you have? by domain?
 - I need to submit an expense report for a team dinner that cost $850 for 10 people. Can you check if this meets our company policy?

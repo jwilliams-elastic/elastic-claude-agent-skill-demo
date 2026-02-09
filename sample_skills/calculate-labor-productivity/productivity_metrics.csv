@@ -1,5 +1,0 @@
-id,calculation,description
-output_per_hour,total_output / total_labor_hours,Units or value produced per labor hour
-revenue_per_employee,total_revenue / fte_count,Revenue generated per full-time equivalent
-value_added_per_employee,(revenue - material_costs) / fte_count,Value added per worker
-labor_cost_ratio,total_labor_cost / total_revenue,Labor cost as percentage of revenue

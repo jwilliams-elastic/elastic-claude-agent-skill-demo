@@ -1,6 +1,0 @@
-id,rate_adjustment
-excellent,-1.5
-good,-0.5
-fair,0.5
-poor,2.0
-very_poor,4.0

@@ -1,4 +1,0 @@
-id,description,weight
-critical,Safety or regulatory issue,100
-major,Affects function or appearance significantly,10
-minor,Slight deviation from specification,1

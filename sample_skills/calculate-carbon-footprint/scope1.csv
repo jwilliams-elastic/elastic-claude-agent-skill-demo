@@ -1,7 +1,0 @@
-id,data_quality,factor,unit
-natural_gas,5,5.3,kg_co2e_per_therm
-fleet_gasoline,5,8.78,kg_co2e_per_gallon
-fleet_diesel,5,10.21,kg_co2e_per_gallon
-propane,4,5.72,kg_co2e_per_gallon
-fuel_oil,4,10.16,kg_co2e_per_gallon
-refrigerants_r410a,3,2088,kg_co2e_per_kg

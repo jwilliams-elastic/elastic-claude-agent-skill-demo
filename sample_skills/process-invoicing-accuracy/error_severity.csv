@@ -1,6 +1,0 @@
-id,blocks_approval,severity
-pricing_mismatch,True,high
-calculation_error,True,high
-tax_rate_error,True,high
-missing_field,False,medium
-rounding_difference,False,low

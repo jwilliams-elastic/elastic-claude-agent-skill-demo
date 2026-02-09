@@ -1,4 +1,0 @@
-backup_power_hours,name,priority,type
-72,Memorial Hospital,critical,hospital
-24,Fire Station 5,critical,fire_station
-48,Water Treatment Plant,critical,utility

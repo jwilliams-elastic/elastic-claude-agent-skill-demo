@@ -1,7 +1,0 @@
-id,code,sensitivity
-visual,VT,low
-ultrasonic,UT,high
-eddy_current,ET,high
-magnetic_particle,MT,medium
-radiographic,RT,high
-penetrant,PT,medium

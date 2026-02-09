@@ -1,5 +1,0 @@
-id,description,reliability
-inquiry,Interviews with control owners,0.6
-observation,Direct observation of control execution,0.75
-inspection,Review of documentation and evidence,0.85
-reperformance,Independent execution of control,0.95

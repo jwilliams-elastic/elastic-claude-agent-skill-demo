@@ -1,6 +1,0 @@
-key,value
-version,2026.1
-last_updated,2026-01-15
-high_risk_countries,"KP,IR,MM,SY,YE,AF"
-fatf_greylist,"AL,BB,BF,CM,CD,GI,HT,JM,JO,ML,MZ,NG,PA,PH,SN,SS,TZ,TR,UG,AE,VN"
-high_risk_industries,"money_service_business,casino_gambling,cryptocurrency_exchange,precious_metals,art_dealer,real_estate,legal_services,offshore_company_formation"

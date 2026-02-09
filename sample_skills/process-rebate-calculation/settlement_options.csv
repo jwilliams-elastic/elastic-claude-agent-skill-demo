@@ -1,5 +1,0 @@
-id,description
-credit_memo,Applied as credit to account
-check,Payment by check
-ach,Electronic funds transfer
-offset,Applied against outstanding invoices

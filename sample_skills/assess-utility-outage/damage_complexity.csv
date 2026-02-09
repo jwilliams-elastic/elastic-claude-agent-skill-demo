@@ -1,7 +1,0 @@
-id,base_hours,crew_type,equipment
-downed_wire,2,line,bucket_truck
-pole_damage,6,line,"line_truck,crane"
-transformer_damage,4,line,"bucket_truck,transformer"
-underground_fault,8,underground,"excavator,splicing_van"
-substation_equipment,12,substation,specialized
-unknown,3,line,service_truck

@@ -1,5 +1,0 @@
-key,value
-target_utilization,0.75
-excellent_threshold,0.85
-poor_threshold,0.6
-empty_mile_target,0.15

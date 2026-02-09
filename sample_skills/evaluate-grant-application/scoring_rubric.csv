@@ -1,9 +1,0 @@
-key,value
-min_beneficiaries,100
-high_impact_multiplier,1.5
-categories_alignment,"{'max_points': 25, 'weight': 0.25}"
-categories_reach,"{'max_points': 20, 'weight': 0.2}"
-categories_measurement,"{'max_points': 15, 'weight': 0.15}"
-categories_sustainability,"{'max_points': 15, 'weight': 0.15}"
-categories_capacity,"{'max_points': 15, 'weight': 0.15}"
-categories_budget,"{'max_points': 10, 'weight': 0.1}"
