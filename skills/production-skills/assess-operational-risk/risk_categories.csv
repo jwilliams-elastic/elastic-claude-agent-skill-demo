@@ -1,0 +1,5 @@
+id,subcategories,weight
+people,"fraud,unauthorized_activity,employment_practices,workplace_safety",0.25
+process,"execution_errors,transaction_capture,monitoring_reporting,documentation",0.3
+systems,"system_failure,data_integrity,cybersecurity,capacity",0.25
+external,"natural_disasters,vendor_failure,regulatory_change,external_fraud",0.2

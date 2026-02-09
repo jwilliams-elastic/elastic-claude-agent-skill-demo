@@ -1,0 +1,8 @@
+id,description,pd_multiplier
+home_improvement,Secured by home equity,0.9
+debt_consolidation,Higher risk due to debt cycle,1.1
+major_purchase,Standard risk,1.0
+medical,Slightly elevated risk,1.05
+business,Higher volatility,1.25
+education,Investment in human capital,0.95
+vacation,Discretionary spending,1.15

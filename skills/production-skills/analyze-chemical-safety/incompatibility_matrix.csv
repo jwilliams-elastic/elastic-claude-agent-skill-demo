@@ -1,0 +1,4 @@
+id,incompatible_with,products,reaction_type,severity
+CH3OH,"HCl,oxidizers","methyl chloride,heat",exothermic,moderate
+HCl,"NaOH,metals,bases","salts,hydrogen gas,heat",violent,high
+NaOH,"HCl,acids,aluminum","salts,hydrogen gas,heat",violent,high

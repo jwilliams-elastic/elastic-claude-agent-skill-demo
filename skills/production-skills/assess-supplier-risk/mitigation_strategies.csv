@@ -1,0 +1,6 @@
+id,applicable_risk_level,implementation_cost,risk_reduction_pct
+dual_sourcing,high,high,0.4
+safety_stock,medium,medium,0.25
+contract_protection,medium,low,0.15
+supplier_development,high,high,0.3
+exit_planning,critical,very_high,0.5

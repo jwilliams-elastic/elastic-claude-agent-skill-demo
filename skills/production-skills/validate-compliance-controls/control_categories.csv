@@ -1,0 +1,5 @@
+id,description,effectiveness_weight,examples
+preventive,Controls that prevent errors or fraud,0.4,"segregation_of_duties,authorization_limits,access_controls"
+detective,Controls that identify issues after occurrence,0.3,"reconciliations,exception_reports,audits"
+corrective,Controls that remediate identified issues,0.2,"error_correction,remediation_procedures,disciplinary_action"
+directive,Controls that guide behavior,0.1,"policies,procedures,training"

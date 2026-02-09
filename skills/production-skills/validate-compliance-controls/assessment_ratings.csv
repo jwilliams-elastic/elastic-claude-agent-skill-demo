@@ -1,0 +1,5 @@
+id,action,description,score_range
+effective,maintain,Control operating as designed,"{'min': 85, 'max': 100}"
+partially_effective,enhance,Minor gaps in design or operation,"{'min': 70, 'max': 84}"
+needs_improvement,remediate,Significant gaps identified,"{'min': 50, 'max': 69}"
+ineffective,redesign,Control not achieving objectives,"{'min': 0, 'max': 49}"

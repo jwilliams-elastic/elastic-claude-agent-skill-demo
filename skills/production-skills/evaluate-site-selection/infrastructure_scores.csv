@@ -1,0 +1,3 @@
+id,airport_miles,major_highway_miles,port_access,power_reliability,water_availability
+transportation,"{'excellent': 20, 'good': 40, 'fair': 60}","{'excellent': 5, 'good': 15, 'fair': 30}","{'has_port': 100, 'rail_to_port': 70, 'no_access': 30}",,
+utilities,,,,"{'high': 99.9, 'medium': 99.0, 'low': 98.0}","{'abundant': 100, 'adequate': 70, 'limited': 40}"

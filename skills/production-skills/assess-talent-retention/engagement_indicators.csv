@@ -1,0 +1,5 @@
+id,benchmark,weight
+participation_rate,0.8,0.25
+nps_score,30,0.25
+pulse_survey_score,4.0,0.3
+voluntary_initiative_count,2,0.2

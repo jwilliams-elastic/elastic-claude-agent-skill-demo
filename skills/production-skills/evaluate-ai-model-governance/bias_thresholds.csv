@@ -1,0 +1,6 @@
+metric,threshold,description,tier_1_required,tier_2_required
+demographic_parity,0.80,Ratio of positive predictions across groups,true,true
+equalized_odds,0.80,Equal TPR and FPR across groups,true,true
+predictive_parity,0.80,Equal precision across groups,true,false
+calibration,0.85,Score calibration across groups,true,false
+disparate_impact,0.80,Four-fifths rule compliance,true,true

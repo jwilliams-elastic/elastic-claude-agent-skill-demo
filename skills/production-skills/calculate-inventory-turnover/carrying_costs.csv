@@ -1,0 +1,6 @@
+component,rate
+capital_cost,0.08
+storage_cost,0.03
+insurance,0.01
+obsolescence,0.02
+handling,0.02

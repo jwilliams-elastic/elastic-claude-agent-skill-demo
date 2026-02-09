@@ -1,0 +1,7 @@
+id,corrosion_prone,description,fatigue_critical,inspection_type,required_ndt_methods
+ZONE-41,True,Wing structure - lower surface,True,detailed,"ultrasonic,eddy_current"
+ZONE-42,False,Wing structure - upper surface,True,detailed,"ultrasonic,visual"
+ZONE-51,True,Fuselage - pressure cabin,True,special_detailed,"ultrasonic,eddy_current,radiographic"
+ZONE-55,False,Empennage - stabilizer,True,detailed,"ultrasonic,eddy_current"
+ZONE-71,True,Landing gear,True,special_detailed,"magnetic_particle,ultrasonic,eddy_current"
+default,False,Standard zone,False,general,visual

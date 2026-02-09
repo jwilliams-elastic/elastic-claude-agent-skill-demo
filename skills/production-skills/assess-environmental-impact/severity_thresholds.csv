@@ -1,0 +1,6 @@
+id,action,min_score
+critical,immediate_mitigation,80
+high,priority_reduction,60
+moderate,improvement_plan,40
+low,monitoring,20
+minimal,maintain_practices,0

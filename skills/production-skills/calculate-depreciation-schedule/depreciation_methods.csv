@@ -1,0 +1,6 @@
+id,description,gaap_compliant,rates,tax_allowed,us_tax_only
+straight_line,Equal depreciation each period,True,,True,
+declining_balance,Accelerated depreciation using declining balance,True,"{'150_percent': 1.5, '200_percent': 2.0}",True,
+sum_of_years_digits,Accelerated based on remaining life,True,,True,
+units_of_production,Based on actual usage or output,True,,True,
+macrs,Modified Accelerated Cost Recovery System,False,,True,True

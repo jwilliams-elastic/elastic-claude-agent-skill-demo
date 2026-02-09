@@ -1,0 +1,5 @@
+id,action,threshold
+low,accept,5
+medium,monitor,10
+high,mitigate,15
+critical,immediate_action,25

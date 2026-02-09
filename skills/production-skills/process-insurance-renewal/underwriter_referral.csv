@@ -1,0 +1,5 @@
+key,value
+rate_increase_threshold,0.2
+loss_ratio_threshold,0.8
+large_claim_threshold,100000
+coverage_change_significant,True

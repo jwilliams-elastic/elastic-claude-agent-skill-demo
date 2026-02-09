@@ -1,0 +1,9 @@
+key,value
+version,2.0.0
+last_updated,2026-01-15
+promotion_lift,1.4
+ordering_cost,50.0
+holding_cost_pct,0.25
+avg_unit_cost,25.0
+weeks_in_season,13
+sell_through_target,0.85

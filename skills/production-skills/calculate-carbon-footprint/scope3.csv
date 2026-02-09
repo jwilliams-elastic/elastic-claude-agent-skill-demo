@@ -1,0 +1,6 @@
+id,air_per_mile,avg_per_mile,car_per_mile,landfill_per_tonne,per_tonne,per_usd,rail_per_mile,rail_per_tonne_km,recycled_per_tonne,ship_per_tonne_km,truck_per_tonne_km,unit
+business_travel,0.255,,0.404,,,,0.177,,,,,kg_co2e_per_mile
+employee_commuting,,0.35,,,,,,,,,,kg_co2e_per_mile
+purchased_goods,,,,,,0.0005,,,,,,tco2e_per_usd
+waste,,,,0.58,0.5,,,,0.02,,,tco2e_per_tonne
+upstream_transportation,,,,,,,,0.028,,0.016,0.107,kg_co2e_per_tonne_km

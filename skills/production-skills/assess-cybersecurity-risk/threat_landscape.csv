@@ -1,0 +1,5 @@
+id,data_breach,ddos,ics_attack,insider_threat,phishing,ransomware,supply_chain
+financial,,"{'base_likelihood': 0.2, 'impact': 'medium'}",,"{'base_likelihood': 0.3, 'impact': 'high'}","{'base_likelihood': 0.6, 'impact': 'high'}","{'base_likelihood': 0.4, 'impact': 'critical'}",
+healthcare,"{'base_likelihood': 0.4, 'impact': 'critical'}",,,,"{'base_likelihood': 0.5, 'impact': 'high'}","{'base_likelihood': 0.5, 'impact': 'critical'}",
+manufacturing,,,"{'base_likelihood': 0.2, 'impact': 'critical'}",,,"{'base_likelihood': 0.35, 'impact': 'critical'}","{'base_likelihood': 0.3, 'impact': 'high'}"
+general,"{'base_likelihood': 0.25, 'impact': 'high'}",,,,"{'base_likelihood': 0.5, 'impact': 'medium'}","{'base_likelihood': 0.3, 'impact': 'high'}",

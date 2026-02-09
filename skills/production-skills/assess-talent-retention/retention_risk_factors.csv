@@ -1,0 +1,7 @@
+id,high_risk_years,low_score_threshold,no_promotion_years,overtime_hours_threshold,poor_rating_threshold,threshold_below_market,weight
+compensation,,,,,,-0.1,0.25
+career_growth,,,3,,,,0.2
+engagement,,3.0,,,,,0.2
+manager_relationship,,,,,3.0,,0.15
+work_life_balance,,,,10,,,0.1
+tenure,"1,2,5,7",,,,,,0.1

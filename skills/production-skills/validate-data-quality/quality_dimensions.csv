@@ -1,0 +1,7 @@
+id,description,weight
+completeness,Degree to which required data is present,0.25
+accuracy,Correctness of data values,0.25
+consistency,Uniformity across datasets,0.2
+timeliness,Currency and freshness of data,0.15
+uniqueness,Absence of duplicates,0.1
+validity,Conformance to defined formats,0.05

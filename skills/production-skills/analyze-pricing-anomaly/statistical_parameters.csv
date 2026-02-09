@@ -1,0 +1,5 @@
+key,value
+z_score_threshold,2.5
+iqr_multiplier,1.5
+minimum_sample_size,30
+confidence_level,0.95

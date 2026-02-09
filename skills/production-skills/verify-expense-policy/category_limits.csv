@@ -1,0 +1,6 @@
+id,daily_meal_allowance,description,hotel_max_tier1,hotel_max_tier2,no_approval_max,per_head_max,requires_headcount,requires_it_approval,requires_procurement_ticket
+Team_Dinner,,Team dinners and social events,,,,75.0,True,,
+Software,,Software licenses and subscriptions,,,,,,,True
+Travel,65.0,Business travel expenses,250.0,175.0,,,,,
+Office_Supplies,,Standard office supplies,,,200.0,,,,
+Hardware,,Computer equipment and peripherals,,,150.0,,,True,

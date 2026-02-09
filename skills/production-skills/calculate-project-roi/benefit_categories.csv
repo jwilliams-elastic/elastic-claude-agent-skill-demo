@@ -1,0 +1,6 @@
+id,confidence,weight
+hard_savings,0.9,1.0
+soft_savings,0.6,0.7
+revenue_increase,0.5,0.8
+risk_avoidance,0.4,0.5
+strategic_value,0.3,0.3

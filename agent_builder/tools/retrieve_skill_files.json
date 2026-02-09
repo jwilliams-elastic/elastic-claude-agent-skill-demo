@@ -1,0 +1,15 @@
+{
+  "id": "retrieve_skill_files",
+  "type": "esql",
+  "description": "Retrieve file contents for a specific skill by skill_id. Returns Python scripts, JSON configs, CSV data files, and markdown documentation associated with the skill. Use search_agent_skills first to find the skill_id.",
+  "tags": ["consultant agent skills"],
+  "configuration": {
+    "query": "FROM agent_skill_files \n| WHERE skill_id == ?skill_id \n| KEEP skill_id, file_name, file_path, file_type, file_content",
+    "params": {
+      "skill_id": {
+        "type": "string",
+        "description": "Unique identifier for the skill (obtained from search_agent_skills)"
+      }
+    }
+  }
+}

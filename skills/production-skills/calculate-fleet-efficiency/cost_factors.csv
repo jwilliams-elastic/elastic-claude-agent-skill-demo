@@ -1,0 +1,5 @@
+key,value
+cost_per_mile,1.85
+driver_cost_per_hour,28
+maintenance_cost_per_mile,0.15
+depreciation_per_mile,0.12

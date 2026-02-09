@@ -1,0 +1,35 @@
+{
+  "id": "search_skills_by_tag",
+  "type": "esql",
+  "description": "Search for skills by one or multiple tags (up to 5) in a single query. Returns skills where the tags field contains ANY of the specified tags. Examples: tag1='aws', tag2='tco'.",
+  "tags": ["consultant agent skills"],
+  "configuration": {
+    "query": "FROM agent_skills \n| WHERE MV_CONTAINS(tags, ?tag1) OR MV_CONTAINS(tags, ?tag2) OR MV_CONTAINS(tags, ?tag3) OR MV_CONTAINS(tags, ?tag4) OR MV_CONTAINS(tags, ?tag5) \n| SORT rating DESC \n| LIMIT ?limit \n| KEEP skill_id, name, domain, tags, short_description, rating",
+    "params": {
+      "tag1": {
+        "type": "string",
+        "description": "First tag to search for (required). Example: 'aws', 'aerospace', 'compliance'"
+      },
+      "tag2": {
+        "type": "string",
+        "description": "Second tag to search for (optional)"
+      },
+      "tag3": {
+        "type": "string",
+        "description": "Third tag to search for (optional)"
+      },
+      "tag4": {
+        "type": "string",
+        "description": "Fourth tag to search for (optional)"
+      },
+      "tag5": {
+        "type": "string",
+        "description": "Fifth tag to search for (optional)"
+      },
+      "limit": {
+        "type": "integer",
+        "description": "Maximum number of skills to return (default: 10)"
+      }
+    }
+  }
+}

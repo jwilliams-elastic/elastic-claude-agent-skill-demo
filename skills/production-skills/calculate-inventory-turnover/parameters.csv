@@ -1,0 +1,11 @@
+parameter,value
+lost_sale_pct,0.40
+backorder_pct,0.35
+substitute_pct,0.25
+seasonal_Q1,0.85
+seasonal_Q2,1.0
+seasonal_Q3,1.05
+seasonal_Q4,1.30
+slow_moving_days_threshold,90
+slow_moving_turns_threshold,2.0
+dead_stock_threshold_days,180

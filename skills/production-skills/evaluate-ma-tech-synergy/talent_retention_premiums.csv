@@ -1,0 +1,8 @@
+role_type,base_retention_pct,critical_multiplier,duration_months,description
+engineering,0.15,1.5,18,Software engineers and architects
+data_science,0.20,1.5,18,Data scientists and ML engineers
+infrastructure,0.12,1.3,12,DevOps and infrastructure engineers
+security,0.18,1.5,18,Security engineers and architects
+leadership,0.25,2.0,24,Tech leadership and management
+product,0.15,1.4,18,Product managers and owners
+general_it,0.10,1.0,12,General IT staff

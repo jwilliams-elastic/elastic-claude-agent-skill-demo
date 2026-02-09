@@ -1,0 +1,7 @@
+id,unit,weight
+sales_per_sqft,dollars,0.25
+conversion_rate,percent,0.2
+average_transaction,dollars,0.15
+labor_efficiency,sales_per_labor_hour,0.15
+inventory_turnover,turns,0.15
+customer_satisfaction,score,0.1

@@ -1,0 +1,10 @@
+id,median,range
+pharmaceutical,0.05,"{'min': 0.02, 'max': 0.15}"
+biotechnology,0.04,"{'min': 0.01, 'max': 0.12}"
+medical_devices,0.04,"{'min': 0.02, 'max': 0.08}"
+software,0.1,"{'min': 0.05, 'max': 0.2}"
+semiconductors,0.03,"{'min': 0.01, 'max': 0.06}"
+automotive,0.03,"{'min': 0.01, 'max': 0.05}"
+consumer_electronics,0.04,"{'min': 0.02, 'max': 0.08}"
+chemicals,0.03,"{'min': 0.01, 'max': 0.06}"
+machinery,0.04,"{'min': 0.02, 'max': 0.07}"

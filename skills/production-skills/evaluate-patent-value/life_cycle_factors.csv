@@ -1,0 +1,5 @@
+id,value_multiplier,years_remaining_min
+early_stage,0.7,15
+growth_stage,1.0,10
+mature_stage,0.8,5
+decline_stage,0.4,0

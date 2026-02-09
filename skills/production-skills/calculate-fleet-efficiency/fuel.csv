@@ -1,0 +1,7 @@
+key,value
+target_mpg,6.5
+fuel_price,4.25
+efficiency_targets_semi,6.5
+efficiency_targets_box_truck,10.0
+efficiency_targets_van,15.0
+efficiency_targets_pickup,18.0

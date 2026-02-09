@@ -1,0 +1,4 @@
+id,description,redundancy_factor,restoration_target_hours,utilization_threshold
+critical,Mission-critical services,2.0,1,0.5
+standard,Standard business services,1.5,4,0.7
+best_effort,Best-effort consumer services,1.0,24,0.85

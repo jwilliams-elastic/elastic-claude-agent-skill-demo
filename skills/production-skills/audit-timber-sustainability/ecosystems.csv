@@ -1,0 +1,6 @@
+id,annual_allowable_cut_m3_per_ha,growth_rate_m3_per_ha_year,rotation_years
+temperate_rainforest,80,12,60
+boreal_forest,40,4,100
+temperate_deciduous,60,8,80
+tropical_plantation,150,25,25
+default,50,6,70

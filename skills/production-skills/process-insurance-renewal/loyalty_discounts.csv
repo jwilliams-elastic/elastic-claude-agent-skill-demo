@@ -1,0 +1,5 @@
+id,discount,tier
+years_1_2,0.0,new
+years_3_5,0.03,established
+years_6_10,0.05,loyal
+years_10_plus,0.08,preferred

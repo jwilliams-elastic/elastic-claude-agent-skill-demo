@@ -1,0 +1,6 @@
+id,description,min_margin,promotional_frequency,typical_markup
+retail,Traditional retail stores,0.25,bi-weekly,0.4
+ecommerce,Online direct and marketplace,0.2,weekly,0.35
+wholesale,Bulk/wholesale distribution,0.15,monthly,0.25
+club,Warehouse club stores,0.12,monthly,0.18
+convenience,Convenience stores,0.35,rarely,0.5

@@ -1,0 +1,5 @@
+key,value
+minimum_spend,10000
+agreement_status,active
+payment_status,current
+compliance_score_min,0.8

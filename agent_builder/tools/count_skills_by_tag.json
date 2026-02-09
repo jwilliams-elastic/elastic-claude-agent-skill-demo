@@ -1,0 +1,15 @@
+{
+  "id": "count_skills_by_tag",
+  "type": "esql",
+  "description": "Get skill counts grouped by individual tag. Use this for tag frequency analysis, tag clouds, or finding the most common skill tags. Expands multi-value tags and counts each occurrence.",
+  "tags": ["consultant agent skills"],
+  "configuration": {
+    "query": "FROM agent_skills \n| MV_EXPAND tags \n| STATS skill_count = COUNT(*) BY tags \n| SORT skill_count DESC \n| LIMIT ?limit",
+    "params": {
+      "limit": {
+        "type": "integer",
+        "description": "Maximum number of tags to return (default: 20)"
+      }
+    }
+  }
+}

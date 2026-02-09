@@ -1,0 +1,5 @@
+id,limit_pct_of_capital,weight
+trading,0.25,0.3
+lending,0.3,0.35
+derivatives,0.15,0.2
+settlement,0.1,0.15

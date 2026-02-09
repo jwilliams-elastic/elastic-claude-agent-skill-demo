@@ -1,0 +1,7 @@
+id,involuntary,total,voluntary
+technology,0.05,0.18,0.13
+financial_services,0.04,0.14,0.1
+healthcare,0.03,0.15,0.12
+retail,0.08,0.28,0.2
+manufacturing,0.04,0.12,0.08
+default,0.05,0.17,0.12

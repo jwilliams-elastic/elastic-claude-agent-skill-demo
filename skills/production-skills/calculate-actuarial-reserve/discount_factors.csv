@@ -1,0 +1,4 @@
+id,discount_rate,duration
+commercial_auto,0.04,2.5
+general_liability,0.04,4.0
+workers_compensation,0.04,5.0

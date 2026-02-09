@@ -1,0 +1,7 @@
+key,value
+version,2.1.0
+last_updated,2026-01-15
+pricing_rules_psychological_endings,"0.99,0.95,0.49"
+pricing_rules_max_price_increase_pct,0.1
+pricing_rules_min_promo_duration_days,7
+pricing_rules_max_promo_duration_days,28

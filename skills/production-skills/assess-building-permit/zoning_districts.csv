@@ -1,0 +1,7 @@
+id,conditional_uses,max_far,max_height_ft,max_stories,min_lot_size_sqft,name,permitted_uses,setbacks
+R-1,"home_occupation,daycare_small",0.5,35,2,7500,Single Family Residential,"single_family,accessory_dwelling","{'front': 25, 'side': 8, 'rear': 20}"
+R-2,"assisted_living,daycare_large",1.0,45,3,5000,Multi-Family Residential,"single_family,duplex,townhouse,apartment","{'front': 20, 'side': 6, 'rear': 15}"
+C-1,"drive_through,gas_station",1.5,40,2,5000,Neighborhood Commercial,"retail,office,restaurant,personal_service","{'front': 15, 'side': 0, 'rear': 10}"
+C-2,"auto_dealer,industrial_light",2.5,60,4,10000,General Commercial,"retail,office,restaurant,hotel,entertainment","{'front': 10, 'side': 0, 'rear': 10}"
+I-1,"manufacturing_heavy,recycling",0.75,50,3,20000,Light Industrial,"warehouse,manufacturing_light,office,research","{'front': 30, 'side': 15, 'rear': 20}"
+default,,0.5,35,2,10000,Default Zone,,"{'front': 25, 'side': 10, 'rear': 20}"

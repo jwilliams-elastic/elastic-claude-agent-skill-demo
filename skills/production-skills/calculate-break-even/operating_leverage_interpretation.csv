@@ -1,0 +1,4 @@
+id,description,min_dol,risk
+high,Highly sensitive to volume changes,3.0,high
+moderate,Moderate sensitivity to volume,1.5,moderate
+low,Less sensitive to volume changes,0,low

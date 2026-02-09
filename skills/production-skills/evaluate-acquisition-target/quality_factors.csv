@@ -1,0 +1,7 @@
+id,scores,thresholds,weight
+market_position,"{'leader': 100, 'challenger': 75, 'follower': 50, 'niche': 60}",,0.2
+customer_concentration,,"{'low': 0.1, 'medium': 0.25, 'high': 0.4}",0.15
+management_quality,"{'excellent': 100, 'good': 75, 'average': 50, 'weak': 25}",,0.15
+technology_moat,"{'strong': 100, 'moderate': 65, 'weak': 30, 'none': 0}",,0.15
+recurring_revenue,,"{'high': 0.7, 'medium': 0.4, 'low': 0.2}",0.2
+esg_profile,"{'excellent': 100, 'good': 75, 'average': 50, 'poor': 25}",,0.15

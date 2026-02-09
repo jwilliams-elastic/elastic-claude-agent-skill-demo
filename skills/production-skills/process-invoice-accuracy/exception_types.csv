@@ -1,0 +1,7 @@
+id,code,resolution_sla_hours,severity
+price_exception,PE,48,medium
+quantity_exception,QE,48,medium
+duplicate_invoice,DI,24,high
+missing_po,MP,72,high
+calculation_error,CE,24,low
+invalid_vendor,IV,4,critical

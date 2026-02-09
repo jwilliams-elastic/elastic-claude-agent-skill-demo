@@ -1,0 +1,5 @@
+key,value
+initial_response_hours,24
+resolution_days_replacement,5
+resolution_days_refund,7
+resolution_days_repair,14

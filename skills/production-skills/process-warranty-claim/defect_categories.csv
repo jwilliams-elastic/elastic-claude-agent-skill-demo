@@ -1,0 +1,8 @@
+id,description,warranty_covered
+malfunction,Product does not function as intended,True
+performance,Product underperforms specifications,True
+cosmetic,Visual defects not affecting function,False
+wear,Normal wear and tear,False
+safety,Safety-related defect,True
+intermittent,Intermittent malfunction,True
+unknown,Unclassified defect,True

@@ -1,0 +1,7 @@
+id,implementation_effort,potential_savings,time_to_value
+demand_management,medium,0.1,6_months
+specification_optimization,high,0.08,12_months
+supplier_consolidation,medium,0.06,6_months
+competitive_bidding,low,0.05,3_months
+contract_renegotiation,low,0.04,3_months
+process_efficiency,medium,0.03,6_months

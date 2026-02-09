@@ -1,0 +1,4 @@
+key,value
+min_items_for_recommendation,2
+max_recommendations,5
+exclude_same_category,False

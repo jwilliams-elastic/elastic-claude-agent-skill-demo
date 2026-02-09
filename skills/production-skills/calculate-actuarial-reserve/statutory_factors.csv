@@ -1,0 +1,7 @@
+id,loss_ratio,minimum_factor,tail_factor
+commercial_auto,0.68,0.5,1.02
+general_liability,0.65,0.6,1.05
+workers_compensation,0.7,0.55,1.08
+property,0.55,0.4,1.01
+professional_liability,0.6,0.7,1.15
+default,0.65,0.5,1.05

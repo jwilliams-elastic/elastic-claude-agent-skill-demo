@@ -1,0 +1,6 @@
+id,severity,threshold
+above_market_rent,medium,0.1
+short_notice_termination,high,90
+unclear_maintenance,medium,
+no_renewal_option,low,
+percentage_rent_exposure,medium,0.05

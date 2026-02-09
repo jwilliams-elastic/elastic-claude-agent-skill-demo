@@ -1,0 +1,5 @@
+id,high,low,medium
+integration_complexity,0.8,0.95,0.9
+regulatory_risk,0.85,1.0,0.95
+key_person_dependency,0.85,1.0,0.95
+technology_obsolescence,0.75,1.0,0.9

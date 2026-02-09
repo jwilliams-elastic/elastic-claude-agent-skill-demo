@@ -1,0 +1,5 @@
+id,typical_pct,typical_pct_of_cost,typical_per_employee,typical_per_job,typical_years
+tax_abatement,0.5,,,,10
+job_creation_credit,,,,5000,5
+infrastructure_grant,,0.25,,,
+training_assistance,,,2000,,

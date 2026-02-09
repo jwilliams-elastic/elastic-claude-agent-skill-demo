@@ -1,0 +1,4 @@
+id,benefit_factor,cost_factor
+optimistic,1.2,0.9
+base,1.0,1.0
+pessimistic,0.7,1.3

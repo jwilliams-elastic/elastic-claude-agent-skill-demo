@@ -1,0 +1,3 @@
+id,eu_vat_validation,exemption_types,nexus_required,rate_by_country,rate_source,reverse_charge_rules
+us_sales_tax,,"resale,government,nonprofit",True,,tax_jurisdiction_table,
+vat,True,,,True,,True

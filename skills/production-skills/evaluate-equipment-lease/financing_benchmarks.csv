@@ -1,0 +1,4 @@
+key,value
+equipment_loan_rate,0.075
+lease_implicit_rate,0.085
+corporate_discount_rate,0.1

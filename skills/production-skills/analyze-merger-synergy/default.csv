@@ -1,0 +1,3 @@
+id,avg_cost_per_employee,avg_deal_size_pct,cross_sell_conversion,employee_reduction_factor,expansion_factor,it_consolidation_pct,procurement_leverage
+cost_benchmarks,100000,,,0.12,,0.2,0.05
+revenue_benchmarks,,0.01,0.1,,0.05,,

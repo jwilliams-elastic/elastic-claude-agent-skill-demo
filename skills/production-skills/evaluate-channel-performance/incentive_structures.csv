@@ -1,0 +1,5 @@
+id,typical_range
+volume_rebate,"{'min': 0.01, 'max': 0.05}"
+growth_bonus,"{'min': 0.02, 'max': 0.08}"
+market_development_fund,"{'min': 0.01, 'max': 0.03}"
+co_op_advertising,"{'min': 0.01, 'max': 0.02}"

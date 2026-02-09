@@ -1,0 +1,10 @@
+id,description,escalation_timeline_days,failure_rate_threshold,investigation_trigger,safety_critical
+brake_system,"Brake components including ABS, calipers, rotors, lines",5,0.5,3,True
+steering_system,"Steering components including rack, pump, electronic assist",5,0.4,3,True
+fuel_system,"Fuel delivery components including tank, pump, lines",3,0.3,2,True
+restraint_system,"Airbags, seatbelts, pretensioners",3,0.2,1,True
+powertrain,"Engine, transmission, driveline components",30,2.0,10,False
+electrical_system,"Wiring, modules, sensors, battery",30,3.0,15,False
+hvac_system,"Heating, ventilation, air conditioning",60,5.0,25,False
+body_structure,"Structural components, doors, latches",10,0.8,5,True
+general,Default category for unclassified components,45,5.0,20,False

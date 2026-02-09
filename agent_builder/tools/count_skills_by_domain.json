@@ -1,0 +1,10 @@
+{
+  "id": "count_skills_by_domain",
+  "type": "esql",
+  "description": "Get skill counts grouped by domain. Use this for histograms, bar charts, or any aggregation of skills by domain category. Returns domain names with their skill counts sorted by count descending.",
+  "tags": ["consultant agent skills"],
+  "configuration": {
+    "query": "FROM agent_skills \n| STATS skill_count = COUNT(*) BY domain \n| SORT skill_count DESC",
+    "params": {}
+  }
+}

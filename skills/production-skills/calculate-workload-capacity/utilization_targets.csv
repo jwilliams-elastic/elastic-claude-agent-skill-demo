@@ -1,0 +1,5 @@
+key,value
+optimal_min,0.7
+optimal_max,0.85
+warning_threshold,0.9
+critical_threshold,0.95

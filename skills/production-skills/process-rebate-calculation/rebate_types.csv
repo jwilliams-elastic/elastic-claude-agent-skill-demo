@@ -1,0 +1,6 @@
+id,calculation_method,description,settlement_frequency
+volume_based,tiered_percentage,Rebate based on purchase volume tiers,quarterly
+growth_based,growth_percentage,Rebate for year-over-year growth,annual
+market_share,target_achievement,Rebate for achieving market share targets,annual
+mix_based,weighted_mix,Rebate for product mix compliance,quarterly
+early_payment,fixed_percentage,Rebate for prompt payment,per_invoice

@@ -1,0 +1,8 @@
+key,value
+single_counterparty_warning,0.08
+single_counterparty_limit,0.1
+sector_warning,0.2
+sector_limit,0.25
+geographic_warning,0.25
+geographic_limit,0.3
+maturity_bucket_limit,0.35

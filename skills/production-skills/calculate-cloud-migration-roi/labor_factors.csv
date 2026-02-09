@@ -1,0 +1,5 @@
+architecture,infra_fte_reduction,cloud_eng_increase,net_fte_change,reskilling_months
+iaas,0.30,0.20,-0.10,6
+paas,0.45,0.15,-0.30,9
+serverless,0.50,0.25,-0.25,12
+saas,0.60,0.10,-0.50,3

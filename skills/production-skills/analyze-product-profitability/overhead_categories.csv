@@ -1,0 +1,5 @@
+id,allocation_base,typical_pct
+manufacturing,machine_hours,0.15
+selling,revenue,0.1
+administrative,revenue,0.08
+distribution,units_shipped,0.05

@@ -1,0 +1,5 @@
+id,absolute_max,action_if_exceeded,percentage
+price_variance,100,flag_for_review,0.02
+quantity_variance,10,flag_for_review,0.05
+total_variance,50,reject,0.01
+tax_variance,10,flag_for_review,0.005

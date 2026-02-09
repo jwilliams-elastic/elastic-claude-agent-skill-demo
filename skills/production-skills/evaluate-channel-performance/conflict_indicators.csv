@@ -1,0 +1,5 @@
+id,any_occurrence,severity,threshold_count,threshold_pct
+price_undercutting,,high,,0.1
+territory_overlap,,medium,,0.25
+customer_poaching,,high,5,
+unauthorized_sales,True,critical,,

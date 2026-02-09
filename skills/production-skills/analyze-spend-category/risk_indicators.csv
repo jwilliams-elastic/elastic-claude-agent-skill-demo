@@ -1,0 +1,5 @@
+id,severity,threshold
+price_volatility,high,0.15
+supply_disruption,critical,0.1
+quality_issues,high,0.05
+delivery_delays,medium,0.1

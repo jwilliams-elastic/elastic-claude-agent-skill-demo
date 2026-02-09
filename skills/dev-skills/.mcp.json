@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "elastic": {
+      "type": "http",
+      "url": "${ELASTIC_MCP_URL}",
+      "headers": {
+        "Authorization": "ApiKey ${ELASTIC_API_KEY}"
+      }
+    }
+  }
+}

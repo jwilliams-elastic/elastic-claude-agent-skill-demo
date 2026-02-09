@@ -1,0 +1,23 @@
+{
+  "id": "search_agent_skills",
+  "type": "esql",
+  "description": "Find agent skills to EXECUTE by hybrid search (lexical + semantic with RRF). Use ONLY when you need to find a skill to run for solving a business problem. Returns skill metadata for loading skill files. DO NOT use for analytics, counts, histograms, or aggregations on the agent_skills index - use platform.core.generate_esql instead.",
+  "tags": ["consultant agent skills"],
+  "configuration": {
+    "query": "FROM agent_skills METADATA _score, _id, _index \n| EVAL tags_str = MV_CONCAT(tags, \",\") \n| WHERE tags_str RLIKE ?tag \n| FORK (WHERE MATCH(name, ?query) OR MATCH(description, ?query) OR MATCH(short_description, ?query) OR MATCH(examples, ?query) | SORT _score DESC | LIMIT 100) (WHERE MATCH(semantic_content, ?query) | SORT _score DESC | LIMIT 100) \n| FUSE \n| SORT _score DESC \n| LIMIT ?limit \n| KEEP skill_id, name, domain, tags, short_description, rating, author, version",
+    "params": {
+      "query": {
+        "type": "string",
+        "description": "Natural language search query to find relevant skills"
+      },
+      "tag": {
+        "type": "string",
+        "description": "Regex pattern to filter by tags (e.g., '.*finance.*', '.*compliance.*'). Use '.*' to match all tags."
+      },
+      "limit": {
+        "type": "integer",
+        "description": "Maximum number of skills to return (default: 5)"
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+key,value
+residential,1.0
+commercial,2.0
+industrial,5.0
+critical_infrastructure,10.0

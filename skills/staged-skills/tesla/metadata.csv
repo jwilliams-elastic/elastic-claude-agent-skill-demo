@@ -1,0 +1,16 @@
+key,value
+document_name,TeslaCompanyProfile.pdf
+source,Bain & Company
+total_pages,46
+document_date,March 2021
+last_updated,June 2021
+document_type,Company Profile
+company,Tesla
+industry,Automotive
+topics,"Business Model, Customer Journey, Manufacturing, Battery Technology, Sales Strategy"
+legacy_system_percentage,12
+cloud_adoption_percentage,78
+analytics_maturity,predictive
+digital_talent_percentage,72
+agile_team_percentage,75
+process_automation_rate,82

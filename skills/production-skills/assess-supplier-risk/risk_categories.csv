@@ -1,0 +1,7 @@
+id,data_sources,indicators,weight
+financial_risk,"credit_reports,financial_statements,payment_history","credit_score,profitability,liquidity,debt_ratio",0.25
+operational_risk,"scorecards,audits,performance_reports","capacity_utilization,quality_metrics,delivery_performance,workforce_stability",0.25
+strategic_risk,"spend_analysis,market_research,contract_terms","dependency_level,substitutability,relationship_tenure,innovation_capability",0.15
+compliance_risk,"audits,certifications,news_monitoring","regulatory_status,certifications,ethical_practices,environmental_compliance",0.15
+geopolitical_risk,"country_ratings,news,government_sources","country_risk,political_stability,trade_restrictions,currency_volatility",0.1
+cybersecurity_risk,"security_assessments,questionnaires,certifications","security_posture,data_handling,incident_history,compliance_certifications",0.1

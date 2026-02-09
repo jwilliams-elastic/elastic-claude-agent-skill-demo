@@ -1,0 +1,8 @@
+key,value
+version,2026.1
+last_updated,2026-01-15
+category_affinities_bakery,"dairy,spreads,beverages"
+category_affinities_dairy,"bakery,eggs,breakfast"
+category_affinities_meat,"produce,condiments,bakery"
+category_affinities_produce,"meat,dairy,snacks"
+category_affinities_beverages,"snacks,bakery,frozen"

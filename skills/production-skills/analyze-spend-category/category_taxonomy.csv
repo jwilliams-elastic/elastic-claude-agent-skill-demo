@@ -1,0 +1,8 @@
+id,savings_potential,subcategories,typical_spend_share
+direct_materials,"{'min': 0.03, 'max': 0.08}","raw_materials,components,packaging",0.35
+indirect_materials,"{'min': 0.05, 'max': 0.15}","mro_supplies,office_supplies,it_hardware",0.1
+services,"{'min': 0.05, 'max': 0.12}","professional_services,outsourced_services,contingent_labor",0.25
+facilities,"{'min': 0.03, 'max': 0.1}","real_estate,utilities,maintenance",0.12
+technology,"{'min': 0.08, 'max': 0.2}","software,hardware,telecom",0.1
+travel_expenses,"{'min': 0.1, 'max': 0.25}","air_travel,lodging,ground_transport",0.05
+marketing,"{'min': 0.05, 'max': 0.15}","advertising,events,promotional",0.03

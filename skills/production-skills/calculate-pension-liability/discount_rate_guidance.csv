@@ -1,0 +1,4 @@
+key,value
+method,yield_curve
+benchmark,AA_corporate_bonds
+duration_matching,True

@@ -1,0 +1,5 @@
+id,extended_available,transferable,warranty_months
+electronics,True,False,12
+appliances,True,True,24
+furniture,False,False,12
+general,False,False,12

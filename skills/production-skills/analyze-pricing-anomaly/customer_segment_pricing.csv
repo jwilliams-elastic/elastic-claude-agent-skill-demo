@@ -1,0 +1,5 @@
+id,discount_tier,price_band
+enterprise,0.2,negotiated
+mid_market,0.15,standard_minus
+smb,0.1,standard
+retail,0.05,list

@@ -1,0 +1,4 @@
+id,compressor,crane,excavator,forklift,general,generator,loader,truck
+base_per_hour,10,25,18,8,12,14,15,12
+fuel_per_hour,15,35,28,8,15,20,22,18
+major_overhaul_intervals,,12000,10000,,10000,,8000,

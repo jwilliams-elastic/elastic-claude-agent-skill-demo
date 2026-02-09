@@ -1,0 +1,5 @@
+id,rating,residual_factor
+strong,1,0.25
+adequate,2,0.5
+weak,3,0.75
+ineffective,4,1.0

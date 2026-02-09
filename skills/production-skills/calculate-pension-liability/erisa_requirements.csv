@@ -1,0 +1,3 @@
+id,at_risk_threshold,flat_rate_per_participant,shortfall_amortization_years,variable_rate_cap_per_participant,variable_rate_per_1000_unfunded
+minimum_funding,0.8,,7,,
+pbgc_premiums,,96,,652,52

@@ -1,0 +1,4 @@
+id,description,max_amount,min_amount
+manager_approval,,500.0,100.0
+vp_approval,All expenses over $500 require VP approval,,500.01
+cfo_approval,"Expenses over $10,000 require CFO approval",,10000.0

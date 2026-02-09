@@ -1,0 +1,6 @@
+id,auto_flag,description,severity
+price_outlier,True,Price significantly different from typical range,high
+unusual_discount,True,Discount exceeds normal authorization levels,high
+margin_erosion,True,Transaction margin below acceptable threshold,medium
+volume_price_mismatch,False,Volume discount not properly applied,medium
+geographic_inconsistency,False,Price inconsistent with regional pricing,low

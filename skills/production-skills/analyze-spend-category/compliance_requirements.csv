@@ -1,0 +1,6 @@
+id,target,weight
+preferred_supplier_usage,0.8,0.3
+contract_compliance,0.9,0.25
+po_compliance,0.95,0.2
+invoice_accuracy,0.98,0.15
+on_time_payment,0.95,0.1

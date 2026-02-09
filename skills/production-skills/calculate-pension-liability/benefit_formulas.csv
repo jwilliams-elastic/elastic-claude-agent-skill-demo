@@ -1,0 +1,4 @@
+id,averaging_period_years,description,interest_credit_rate
+final_average,5,Benefit based on final average salary,
+career_average,,Benefit based on career average salary,
+cash_balance,,Account-based benefit,0.04

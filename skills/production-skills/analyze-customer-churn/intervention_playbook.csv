@@ -1,0 +1,4 @@
+id,actions,sla_hours
+high_value_high_risk,"executive_outreach,qbr_schedule,discount_offer",24
+high_value_medium_risk,"csm_call,training_offer",72
+low_value_high_risk,"automated_campaign,self_service_resources",168

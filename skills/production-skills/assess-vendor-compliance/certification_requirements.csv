@@ -1,0 +1,6 @@
+id,audit_frequency,validity_years
+ISO_9001,annual,3
+ISO_14001,annual,3
+ISO_27001,annual,3
+SOC2_Type2,annual,1
+CMMI_Level3,biennial,3

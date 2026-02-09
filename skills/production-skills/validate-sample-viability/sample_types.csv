@@ -1,0 +1,7 @@
+id,critical,max_processing_time_hours,min_volume_ml,required_assays,storage_requirements
+Plasma-EDTA,,4,3.0,"Complete Metabolic Panel,Lipid Profile,Inflammatory Markers (CRP, IL-6)","{'temp_range_celsius': [-80, -70], 'max_freeze_thaw_cycles': 2}"
+Serum,,6,2.5,"Tumor Markers,Hormone Panel,Protein Electrophoresis","{'temp_range_celsius': [-80, -70], 'max_freeze_thaw_cycles': 3}"
+Whole-Blood,,2,5.0,"Complete Blood Count,Flow Cytometry,Genomic DNA Extraction","{'temp_range_celsius': [-80, -70], 'max_freeze_thaw_cycles': 1}"
+Plasma-Heparin,,3,3.5,"Coagulation Studies,Ammonia Level,Lactate","{'temp_range_celsius': [-80, -70], 'max_freeze_thaw_cycles': 2}"
+Urine,,8,10.0,"Urinalysis,Microalbumin,Toxicology Screen","{'temp_range_celsius': [-80, -70], 'max_freeze_thaw_cycles': 2}"
+CSF,True,1,1.0,"Cell Count,Protein,Glucose,Oligoclonal Bands","{'temp_range_celsius': [-80, -70], 'max_freeze_thaw_cycles': 1}"

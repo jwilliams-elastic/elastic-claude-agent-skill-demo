@@ -1,0 +1,7 @@
+id,benchmark,description,weight
+day_1,0.4,First day retention,0.15
+day_7,0.2,Week one retention,0.2
+day_14,0.12,Two week retention,0.15
+day_30,0.08,Month one retention,0.2
+day_60,0.05,Month two retention,0.15
+day_90,0.04,Month three retention,0.15

@@ -1,0 +1,4 @@
+key,value
+overtime_threshold,0.85
+overtime_premium,1.5
+underutilization_cost_pct,0.2

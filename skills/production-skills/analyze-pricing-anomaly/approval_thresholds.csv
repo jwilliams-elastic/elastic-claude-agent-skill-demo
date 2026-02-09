@@ -1,0 +1,5 @@
+key,value
+auto_approve_discount_pct,0.1
+manager_approval_discount_pct,0.2
+director_approval_discount_pct,0.3
+vp_approval_discount_pct,0.4

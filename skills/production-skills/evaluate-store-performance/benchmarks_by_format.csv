@@ -1,0 +1,6 @@
+id,avg_transaction,conversion,labor_efficiency,sales_sqft
+department_store,75,25,85,180
+specialty,65,35,120,400
+grocery,45,90,200,550
+discount,35,40,150,225
+convenience,12,95,95,650

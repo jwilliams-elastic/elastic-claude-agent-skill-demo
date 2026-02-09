@@ -1,0 +1,5 @@
+id,cam_psf,escalation_pct,rent_psf
+office,12,0.03,45
+retail,8,0.03,35
+industrial,2,0.025,8
+warehouse,1.5,0.02,6
