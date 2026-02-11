@@ -4,7 +4,7 @@
   "description": "Search for skills by one or multiple tags (up to 5) in a single query. Returns skills where the tags field contains ANY of the specified tags. Examples: tag1='aws', tag2='tco'.",
   "tags": ["consultant agent skills"],
   "configuration": {
-    "query": "FROM agent_skills \n| WHERE MV_CONTAINS(tags, ?tag1) OR MV_CONTAINS(tags, ?tag2) OR MV_CONTAINS(tags, ?tag3) OR MV_CONTAINS(tags, ?tag4) OR MV_CONTAINS(tags, ?tag5) \n| SORT rating DESC \n| LIMIT ?limit \n| KEEP skill_id, name, domain, tags, short_description, rating",
+    "query": "FROM agent_skills \n| WHERE MV_CONTAINS(tags, ?tag1) \n     OR MV_CONTAINS(tags, ?tag2) \n     OR MV_CONTAINS(tags, ?tag3) \n     OR MV_CONTAINS(tags, ?tag4) \n     OR MV_CONTAINS(tags, ?tag5) \n| SORT rating DESC \n| LIMIT ?limit \n| KEEP skill_id, name, domain, tags, short_description, rating",
     "params": {
       "tag1": {
         "type": "string",

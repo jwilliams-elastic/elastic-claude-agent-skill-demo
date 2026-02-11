@@ -85,8 +85,9 @@ To delete all tools and agents for a fresh rebuild:
 - **Structure:**
   - `/config`: JSON mappings and settings for Elasticsearch indices
   - `/scripts`: Ingestion and management scripts
-  - `/sample_skills`: Directory containing markdown/Python content for skills
-  - `/mcp`: Tool definitions for Agent Builder
+  - `/skills`: Organized skill directories (production-skills, staged-skills, dev-skills)
+  - `/api`: FastAPI service for skill operations
+  - `/agent_builder`: MCP tools, agents, and workflow definitions
 
 ## Prerequisites
 
@@ -149,16 +150,16 @@ Follow these steps to set up and run the demo:
 
 The ingestion script will automatically create the `agent_skills` index if it doesn't exist, using the mappings and settings from the `/config` directory.
 
-### Step 2: Ingest Sample Skills
+### Step 2: Ingest Production Skills
 
-Run the ingestion script to index all skills from the `sample_skills` directory:
+Run the ingestion script to index all skills from the `skills/production-skills` directory:
 
 ```bash
-uv run scripts/ingest_skills.py
+uv run scripts/ingest_skills.py skills/production-skills
 ```
 
 This script will:
-- Scan the `sample_skills` directory for subdirectories containing `SKILL.md` files
+- Scan the `skills/production-skills` directory for subdirectories containing `SKILL.md` files
 - Parse each skill's metadata (name, domain, tags, description)
 - Create documents with the skill content and metadata
 - Index documents to Elasticsearch (embeddings generated automatically via semantic_text inference)
@@ -296,10 +297,10 @@ For comprehensive documentation on Agent Builder tools, see:
 
 ## Sample Skills
 
-This repository includes three domain-specific skills with proprietary business logic:
+This repository includes domain-specific skills with proprietary business logic organized in the `skills/production-skills/` directory.
 
 ### 1. Verify Expense Policy (Finance)
-**Location:** `sample_skills/verify-expense-policy/`
+**Location:** `skills/production-skills/verify-expense-policy/`
 
 **Proprietary Rules:**
 - Expenses > $500 require VP_APPROVAL
@@ -313,11 +314,11 @@ This repository includes three domain-specific skills with proprietary business 
 
 **Usage:**
 ```bash
-uv run sample_skills/verify-expense-policy/policy_check.py
+uv run skills/production-skills/verify-expense-policy/policy_check.py
 ```
 
 ### 2. Adjudicate Storm Claim (Insurance)
-**Location:** `sample_skills/adjudicate-storm-claim/`
+**Location:** `skills/production-skills/adjudicate-storm-claim/`
 
 **Proprietary Rules:**
 - Storm category ≥3 waives deductible
@@ -331,11 +332,11 @@ uv run sample_skills/verify-expense-policy/policy_check.py
 
 **Usage:**
 ```bash
-uv run sample_skills/adjudicate-storm-claim/adjudicator.py
+uv run skills/production-skills/adjudicate-storm-claim/adjudicator.py
 ```
 
 ### 3. Validate Sample Viability (Life Sciences)
-**Location:** `sample_skills/validate-sample-viability/`
+**Location:** `skills/production-skills/validate-sample-viability/`
 
 **Proprietary Rules:**
 - Plasma-EDTA samples must be processed within 4 hours
@@ -350,7 +351,7 @@ uv run sample_skills/adjudicate-storm-claim/adjudicator.py
 
 **Usage:**
 ```bash
-uv run sample_skills/validate-sample-viability/viability_check.py
+uv run skills/production-skills/validate-sample-viability/viability_check.py
 ```
 
 ## Project Structure
@@ -369,31 +370,30 @@ elastic-claude-agent-skill-demo/
 │   ├── test_agent_builder_tools.py        # Agent Builder tool testing
 │   └── test_esql_queries.py               # ES|QL query testing utility
 ├── agent_builder/
+│   ├── agents/                  # Agent definitions (JSON)
 │   ├── tools/                   # Agent Builder tool definitions (JSON)
-│   │   ├── search_skills.json
-│   │   ├── get_skill_files.json
-│   │   ├── list_skills_by_domain.json
+│   │   ├── search_agent_skills.json
+│   │   ├── retrieve_skill_files.json
 │   │   ├── get_skill_metadata.json
-│   │   └── search_skills_by_tags.json
+│   │   ├── count_skills_by_domain.json
+│   │   ├── count_skills_by_tag.json
+│   │   ├── get_skills_summary.json
+│   │   ├── search_skills_by_tag.json
+│   │   └── consultant_skills_operator.json
+│   ├── workflows/               # Workflow definitions
 │   └── queries/                 # ES|QL query files for testing
-│       ├── search_skills.esql
-│       ├── get_skill_files.esql
-│       ├── list_skills_by_domain.esql
-│       ├── get_skill_metadata.esql
-│       └── search_skills_by_tags.esql
-├── sample_skills/
-│   ├── verify-expense-policy/
-│   │   ├── SKILL.md
-│   │   ├── policy_check.py
-│   │   └── allowance_table.json
-│   ├── adjudicate-storm-claim/
-│   │   ├── SKILL.md
-│   │   ├── adjudicator.py
-│   │   └── risk_matrix.csv
-│   └── validate-sample-viability/
-│       ├── SKILL.md
-│       ├── viability_check.py
-│       └── biomarker_constraints.json
+├── api/
+│   └── main.py                  # FastAPI service for skill operations
+├── skills/
+│   ├── production-skills/       # Production-ready skills (loaded by setup-skills)
+│   │   ├── verify-expense-policy/
+│   │   ├── adjudicate-storm-claim/
+│   │   ├── validate-sample-viability/
+│   │   └── ... (200+ skills)
+│   ├── staged-skills/           # Testing/staging area (default for update-skills)
+│   └── dev-skills/              # Development workspace
+│       ├── SKILLBUILDER.md      # Guide for creating new skills
+│       └── spreadsheets/        # Source spreadsheets for skill conversion
 ├── tests/
 │   ├── conftest.py                   # pytest fixtures and helpers
 │   ├── test_expense_policy.py        # Finance scenario tests
@@ -427,9 +427,10 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 - Confirm the Jina embeddings inference endpoint (`.jina-embeddings-v3`) is configured
 
 ### Ingestion script fails
-- Confirm all sample skill directories contain a `SKILL.md` file
+- Confirm all skill directories contain a `SKILL.md` file with proper format
 - Check that Python syntax in all `.py` files is valid
-- Verify JSON/CSV data files are properly formatted
+- Verify CSV data files are properly formatted
+- Ensure the skills directory path is correct (use absolute paths with the API)
 
 ### Import errors
 Run `uv sync` to ensure all dependencies are installed:
@@ -520,27 +521,42 @@ For more details, see [TESTING.md](TESTING.md).
 
 ### Adding New Skills
 
-1. Create a new directory under `sample_skills/`:
+1. Create a new directory under `skills/dev-skills/` for development:
    ```bash
-   mkdir sample_skills/your-new-skill
+   mkdir skills/dev-skills/your-new-skill
    ```
 
-2. Create a `SKILL.md` file with metadata:
+2. Create a `SKILL.md` file with metadata (see `skills/dev-skills/SKILLBUILDER.md` for format):
    ```markdown
    # Skill: Your New Skill
-   **Domain:** your_domain
-   **Tags:** tag1, tag2, tag3
-   **Description:** Brief description of what this skill does.
 
-   ## Instructions
-   [Your skill instructions here]
+   ## Domain
+   your_domain
+
+   ## Description
+   Brief description of what this skill does.
+
+   ## Tags
+   tag1, tag2, tag3
+
+   ## Input Parameters
+   - `param1` (type): description
+
+   ## Output
+   - `result` (type): description
    ```
 
-3. Add implementation files (Python scripts, JSON/CSV data, etc.)
+3. Add implementation files (Python scripts, CSV reference data, etc.)
 
-4. Run the ingestion script to index the new skill:
+4. Test your skill locally, then move to `skills/staged-skills/` when ready
+
+5. Use the API to ingest skills:
    ```bash
-   uv run scripts/ingest_skills.py
+   # For staged skills (default)
+   curl -X POST http://localhost:8000/api/v1/ops/update-skills
+
+   # For production skills
+   curl -X POST http://localhost:8000/api/v1/ops/setup-skills
    ```
 
 ### Testing Skills Locally
@@ -549,12 +565,18 @@ Each skill can be executed independently for testing:
 
 ```bash
 # Run with uv
-uv run sample_skills/your-skill/script.py
+uv run skills/dev-skills/your-skill/script.py
 
 # Or activate the virtual environment
 source .venv/bin/activate
-python sample_skills/your-skill/script.py
+python skills/dev-skills/your-skill/script.py
 ```
+
+### Skills Directory Structure
+
+- **production-skills/**: Production-ready skills loaded by `setup-skills` API
+- **staged-skills/**: Testing/staging area, default location for `update-skills` API
+- **dev-skills/**: Development workspace with SKILLBUILDER.md guide and templates
 
 ## License
 

@@ -4,7 +4,7 @@
   "description": "Get a summary of the skills repository including total count, domain count, and average rating. Use this for overview statistics about the agent_skills index.",
   "tags": ["consultant agent skills"],
   "configuration": {
-    "query": "FROM agent_skills \n| STATS total_skills = COUNT(*), unique_domains = COUNT_DISTINCT(domain), avg_rating = AVG(rating), total_usage = SUM(usage_count)",
+    "query": "FROM agent_skills \n| STATS total_skills = COUNT(*), \n        unique_domains = COUNT_DISTINCT(domain), \n        avg_rating = AVG(rating), \n        total_usage = SUM(usage_count)",
     "params": {}
   }
 }

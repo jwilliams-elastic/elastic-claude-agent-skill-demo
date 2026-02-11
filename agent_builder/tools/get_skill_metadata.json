@@ -4,7 +4,7 @@
   "description": "Retrieve lightweight metadata for skills by skill_id or by multiple tags (up to 3). Returns skill information excluding large fields like skill_markdown and full description.",
   "tags": ["consultant agent skills"],
   "configuration": {
-    "query": "FROM agent_skills \n| WHERE skill_id == ?skill_id OR MV_CONTAINS(tags, ?tag1) OR MV_CONTAINS(tags, ?tag2) OR MV_CONTAINS(tags, ?tag3) \n| KEEP skill_id, name, domain, tags, author, version, rating, created_at",
+    "query": "FROM agent_skills \n| WHERE skill_id == ?skill_id \n     OR MV_CONTAINS(tags, ?tag1) \n     OR MV_CONTAINS(tags, ?tag2) \n     OR MV_CONTAINS(tags, ?tag3) \n| KEEP skill_id, name, domain, tags, author, version, rating, created_at",
     "params": {
       "skill_id": {
         "type": "string",

@@ -1,3 +1,21 @@
+DEMO #1
+I need to submit an expense report for a team dinner that cost $850 for 10 people. Can you check if this meets our company policy?
+
+update skills using workflow
+
+DEMO #2 
+How does Tesla's direct-to-consumer sales model work and how many states ban it?
+
+Can you run a digital transformation assessment comparison for Ford Motor Company vs Tesla? We have good knowledge on Tesla but not Ford. Here's what I know about Ford:
+                                                                                                   
+legacy: 58%                                                                                                
+cloud: 38%                                                                                               
+analytics: diagnostic                                                                                              
+ditital talent: 28%                                                                                               
+agile team: 42%                                                                                                   
+process automation rate: 4%
+
+DEMO #3  
 Hey, I have some spreadsheets with business calculations. Can you turn them into AI skills using SKILLBUILDER.md?
 
-Great! Now let's publish these new skills to Elastic so agents can discover and use them.
+Great! Now let's publish the dev-skills to Elastic so agents can discover and use them.
