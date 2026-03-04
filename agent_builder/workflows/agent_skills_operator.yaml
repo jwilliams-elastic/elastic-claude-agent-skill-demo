@@ -7,7 +7,7 @@ triggers:
   - type: manual
 
 consts:
-  api_base_url: https://sixth-cross-tel-newfoundland.trycloudflare.com
+  api_base_url: https://geneva-ages-holly-fallen.trycloudflare.com
 
 inputs:
   - name: operation
@@ -27,7 +27,6 @@ steps:
       method: POST
       headers:
         Content-Type: application/json
-      timeout: 120s
       body: >-
         {%- if inputs.skills_path != "" %}{"skills_path": "{{ inputs.skills_path }}"}{%- endif %}
 
